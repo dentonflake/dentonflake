@@ -2,3 +2,14 @@
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-optical-sizing: auto;
 }
+
+body {
+    background-color: rgba(25, 25, 25, 1);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
