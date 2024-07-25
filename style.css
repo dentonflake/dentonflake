@@ -1,6 +1,10 @@
 * {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-optical-sizing: auto;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
