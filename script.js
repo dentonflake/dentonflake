@@ -1,3 +1,3 @@
 function handleOnLoad() {
-    window.location = "https://instagram.com/dentonflake"
+    window.location = "https://linktr.ee/dentonflake"
 }
