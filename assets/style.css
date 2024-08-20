@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+
+    color: rgba(25, 25, 25, 1);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+
+    background-color: rgba(249, 249, 249, 1);
+}
+
+#container {
+    width: 100%;
+    max-width: 750px;
+}
+
+header {
+    display: flex;
+}
+
+#logo {
+    width: 80px;
+    border-radius: 50%;
+}
+
+#details {
+    padding: 10px;
+}
+
+#title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#subtitle:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 10px 0;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px black solid;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    color: black;
+    font-size: 15px;
+
+    margin: 10px 0;
+}
+
+.button:hover {
+    transition: 0.3s;
+    background-color: rgba(25, 25, 25, 1);
+    color: white;
+}
+
+footer {
+    border-top: 1px solid rgba(25, 25, 25, 1);
+    padding: 10px 0;
+}
+
+#copyright {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        padding: 30px;
+    }
+    
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #details {
+        padding: 6px;
+    }
+
+    #title {
+        font-size: 22.5px;
+        font-weight: 500;
+    }
+
+    #subtitle {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 11.25px;
+    }
+
+    #copyright {
+        font-size: 11.25px;
+    }
+}
