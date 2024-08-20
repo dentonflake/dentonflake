@@ -124,15 +124,15 @@ footer {
     }
 
     .button {
-        font-size: 11.25px;
+        font-size: 14px;
         margin: 7px 0;
     }
 
     #copyright {
-        font-size: 11.25px;
+        font-size: 12px;
     }
 
     h3 {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
