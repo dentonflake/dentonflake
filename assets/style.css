@@ -96,6 +96,10 @@ footer {
     body {
         padding: 30px;
     }
+
+    main {
+        padding: 7px 0;
+    }
     
     #logo {
         width: 60px;
@@ -117,6 +121,7 @@ footer {
 
     .button {
         font-size: 11.25px;
+        margin: 7px 0;
     }
 
     #copyright {
