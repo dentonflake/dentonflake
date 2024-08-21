@@ -1,6 +1,6 @@
-## hi there 👋
+## dentonflake
 
-### My name is denton flake.
+### best day of my life ☀️
 
 <!--
 **dentonflake/dentonflake** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
