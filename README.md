@@ -1,7 +1,7 @@
 <h1>Hi 👋, I'm Denton Flake</h1>
 <h3>“best day of my life” ☀️</h3>
 
-- 👨‍💻 All of my projects are available at [dentonflake.com](dentonflake.com)
+- 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
 
 - 💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️**
 
