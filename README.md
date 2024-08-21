@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Denton Flake</h1>
+<h1>Hi 👋, I'm Denton Flake</h1>
 <h3>“best day of my life” ☀️</h3>
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](dentonflake.com)
