@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Denton Flake</h1>
-<h3 align="center">“best day of my life” ☀️</h3>
+<h3>“best day of my life” ☀️</h3>
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](dentonflake.com)
 
-- 💬 Ask me about **22 | photography 📸 | fishing 🎣 | mountains 🏔️**
+- 💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️**
 
 - 📫 How to reach me **me@dentonflake.com**
 
