@@ -27,7 +27,7 @@ body {
     width: 100%;
     max-width: 550px;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 50px;
     border-radius: 10px;
 }
@@ -88,7 +88,7 @@ main {
 
     margin: 10px 0;
     font-weight: 500;
-    background-color: rgba(250, 175, 100, 0.9);
+    background-image: linear-gradient(rgba(208, 253, 255, 0.9), rgba(187, 253, 255, 0.7));
 }
 
 .button:hover {
