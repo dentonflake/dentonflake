@@ -3,7 +3,7 @@
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
 
-- 💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️**
+- 💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️
 
 - 📫 How to reach me **me@dentonflake.com**
 
