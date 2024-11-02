@@ -1,5 +1,6 @@
 # Hi 👋, I'm Denton Flake
-## “best day of my life” ☀️
+## @g_thompson01 🤍 | January 11 💍
+## 22 | photography 📸 | mountains 🏔️ | fishing 🎣
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
 
