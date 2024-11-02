@@ -1,5 +1,5 @@
-# Hi 👋, I'm Denton Flake
-## “best day of my life” ☀️
+<h1>Hi 👋, I'm Denton Flake</h1>
+<h2>“best day of my life” ☀️</h2>
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
 
