@@ -1,5 +1,5 @@
 # Hey 👋, I am Denton Flake
-## 22 | photography 📸 | mountains 🏔️ | fishing 🎣
+<!-- ## 22 | photography 📸 | mountains 🏔️ | fishing 🎣 -->
 
 - 📫 Contact me at **me@dentonflake.com**
 
