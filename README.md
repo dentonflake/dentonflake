@@ -1,12 +1,5 @@
-<h1>Hi 👋, I'm Denton Flake</h1>
-<h2>“best day of my life” ☀️</h2>
-
-<ul>
-    <li>👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)</li>
-    <li>💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️</li>
-    <li>📫 How to reach me **me@dentonflake.com**</li>
-</ul>
-
+# Hi 👋, I'm Denton Flake
+## “best day of my life” ☀️
 
 - 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
 
