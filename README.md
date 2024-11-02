@@ -1,11 +1,11 @@
-# Hi 👋, I'm Denton Flake
+# Hey 👋, I am Denton Flake
 ## 22 | photography 📸 | mountains 🏔️ | fishing 🎣
 
-- 👨‍💻 All of my projects are available at [dentonflake.com](https://www.dentonflake.com)
+- 📫 Contact me at **me@dentonflake.com**
 
-- 💬 22 | photography 📸 | fishing 🎣 | mountains 🏔️
+- 👨‍💻 View my work at [dentonflake.com](https://www.dentonflake.com)
 
-- 📫 How to reach me **me@dentonflake.com**
+
 
 
 
