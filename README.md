@@ -2,9 +2,9 @@
 
 ## Contact
 
-- 📫 Contact me at **me@dentonflake.com**
+- 📫 Email me at **me@dentonflake.com**
 
-- 👨‍💻 View my work at [dentonflake.com](https://www.dentonflake.com)
+- 👨‍💻 Visit my website: [dentonflake.com](https://www.dentonflake.com)
 
 ## About
 
