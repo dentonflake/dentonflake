@@ -8,7 +8,7 @@
 
 ## About
 
-- I love coding. It is a passion of mine.
+- 👨‍💼 I am 22 years old. I love photography, fishing, and being outdoors. I have 3 years of personal experience with coding. It is one of my favorite hobbies.
 
 
 
