@@ -1,11 +1,14 @@
 # Hey 👋, I am Denton Flake
-<!-- ## 22 | photography 📸 | mountains 🏔️ | fishing 🎣 -->
+
+## Contact
 
 - 📫 Contact me at **me@dentonflake.com**
 
 - 👨‍💻 View my work at [dentonflake.com](https://www.dentonflake.com)
 
+## About
 
+- I love coding. It is a passion of mine.
 
 
 
