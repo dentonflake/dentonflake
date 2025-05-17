@@ -1,0 +1,77 @@
+:root {
+    /* Neutrals */
+    --color-neutral-950: hsl(210, 10%, 10%);
+    --color-neutral-900: hsl(210, 9%, 15%);
+    --color-neutral-800: hsl(210, 8%, 20%);
+    --color-neutral-700: hsl(210, 7%, 30%);
+    --color-neutral-600: hsl(210, 6%, 40%);
+    --color-neutral-500: hsl(210, 5%, 50%);
+    --color-neutral-400: hsl(210, 4%, 60%);
+    --color-neutral-300: hsl(210, 3%, 70%);
+    --color-neutral-200: hsl(210, 2%, 80%);
+    --color-neutral-100: hsl(210, 1%, 90%);
+    --color-neutral-50: hsl(210, 1%, 95%);
+    --color-neutral-25: hsl(210, 1%, 98%);
+
+    /* Supporting */
+    --color-cyan-900: hsl(184, 91%, 17%);
+    --color-cyan-800: hsl(185, 84%, 25%);
+    --color-cyan-700: hsl(185, 81%, 29%);
+    --color-cyan-600: hsl(184, 77%, 34%);
+    --color-cyan-500: hsl(185, 62%, 45%);
+    --color-cyan-400: hsl(185, 57%, 50%);
+    --color-cyan-300: hsl(184, 65%, 59%);
+    --color-cyan-200: hsl(184, 80%, 74%);
+    --color-cyan-100: hsl(185, 94%, 87%);
+    --color-cyan-50:  hsl(186, 100%, 94%);
+
+    /* Font Sizes */
+    --font-size-xxl: 48px;
+    --font-size-xl: 36px;
+    --font-size-lg: 24px;
+    --font-size-md: 20px;
+    --font-size-base: 18px;
+    --font-size-sm: 16px;
+    --font-size-xs: 14px;
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Spacing (4px grid) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+    /* Shadows (two-part) */
+    --shadow-sm:
+        0 1px 2px rgba(0, 0, 0, 0.05),
+        0 1px 1px rgba(0, 0, 0, 0.08);
+
+    --shadow-md:
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 2px 4px rgba(0, 0, 0, 0.1);
+
+    --shadow-lg:
+        0 10px 15px rgba(0, 0, 0, 0.05),
+        0 4px 6px rgba(0, 0, 0, 0.1);
+
+    --shadow-xl:
+        0 20px 25px rgba(0, 0, 0, 0.05),
+        0 8px 10px rgba(0, 0, 0, 0.1);
+}
