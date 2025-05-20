@@ -117,10 +117,6 @@ footer p {
     border-radius: var(--radius-lg);
 }
 
-/* .projects {
-    padding: var(--space-5);
-} */
-
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
