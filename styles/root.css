@@ -25,19 +25,6 @@
     --color-secondary-900: hsl(48, 100%, 20%);
     --color-secondary-950: hsl(48, 100%, 13%);
 
-    /* Accent Colors */
-    --color-accent-050: hsl(330, 100%, 97%);
-    --color-accent-100: hsl(330, 100%, 93%);
-    --color-accent-200: hsl(330, 90%, 85%);
-    --color-accent-300: hsl(330, 85%, 75%);
-    --color-accent-400: hsl(330, 80%, 65%);
-    --color-accent-500: hsl(330, 75%, 55%);
-    --color-accent-600: hsl(330, 70%, 45%);
-    --color-accent-700: hsl(330, 65%, 35%);
-    --color-accent-800: hsl(330, 60%, 27%);
-    --color-accent-900: hsl(330, 55%, 20%);
-    --color-accent-950: hsl(330, 50%, 13%);
-
     /* Neutral Colors */
     --color-neutral-050: hsl(210, 1%, 95%);
     --color-neutral-100: hsl(210, 1%, 90%);
