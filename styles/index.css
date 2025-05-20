@@ -20,6 +20,13 @@ h1 {
     color: var(--color-neutral-050);
 }
 
+h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-5xl--line-height);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-050);
+}
+
 h3 {
     font-size: var(--text-5xl);
     line-height: var(--text-5xl--line-height);
@@ -110,6 +117,9 @@ footer p {
     border-radius: var(--radius-lg);
 }
 
+/* .projects {
+    padding: var(--space-5);
+} */
 
 @media (max-width: 900px) {
     .hero {
