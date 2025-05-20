@@ -39,17 +39,17 @@
     --color-accent-950: hsl(330, 50%, 13%);
 
     /* Neutral Colors */
-    --color-neutral-050: hsl(260, 4%, 98%);
-    --color-neutral-100: hsl(260, 4%, 96%);
-    --color-neutral-200: hsl(260, 4%, 92%);
-    --color-neutral-300: hsl(260, 4%, 87%);
-    --color-neutral-400: hsl(260, 4%, 70%);
-    --color-neutral-500: hsl(260, 4%, 55%);
-    --color-neutral-600: hsl(260, 4%, 44%);
-    --color-neutral-700: hsl(260, 4%, 37%);
-    --color-neutral-800: hsl(260, 4%, 27%);
-    --color-neutral-900: hsl(260, 4%, 21%);
-    --color-neutral-950: hsl(260, 4%, 13%);
+    --color-neutral-050: hsl(210, 1%, 95%);
+    --color-neutral-100: hsl(210, 1%, 90%);
+    --color-neutral-200: hsl(210, 2%, 80%);
+    --color-neutral-300: hsl(210, 3%, 70%);
+    --color-neutral-400: hsl(210, 4%, 60%);
+    --color-neutral-500: hsl(210, 5%, 50%);
+    --color-neutral-600: hsl(210, 6%, 40%);
+    --color-neutral-700: hsl(210, 7%, 30%);
+    --color-neutral-800: hsl(210, 8%, 20%);
+    --color-neutral-900: hsl(210, 9%, 15%);
+    --color-neutral-950: hsl(210, 10%, 10%);
 
     /* Font Weights */
     --font-weight-light: 300;
