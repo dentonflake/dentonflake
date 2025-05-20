@@ -1,38 +1,55 @@
 :root {
-    /* Neutrals */
-    --color-neutral-950: hsl(210, 10%, 10%);
-    --color-neutral-900: hsl(210, 9%, 15%);
-    --color-neutral-800: hsl(210, 8%, 20%);
-    --color-neutral-700: hsl(210, 7%, 30%);
-    --color-neutral-600: hsl(210, 6%, 40%);
-    --color-neutral-500: hsl(210, 5%, 50%);
-    --color-neutral-400: hsl(210, 4%, 60%);
-    --color-neutral-300: hsl(210, 3%, 70%);
-    --color-neutral-200: hsl(210, 2%, 80%);
+    /* Primary Colors */
+    --color-primary-050: hsl(186, 100%, 94%);
+    --color-primary-100: hsl(185, 94%, 87%);
+    --color-primary-200: hsl(184, 80%, 74%);
+    --color-primary-300: hsl(184, 65%, 59%);
+    --color-primary-400: hsl(185, 57%, 50%);
+    --color-primary-500: hsl(185, 62%, 45%);
+    --color-primary-600: hsl(184, 77%, 34%);
+    --color-primary-700: hsl(185, 81%, 29%);
+    --color-primary-800: hsl(185, 84%, 25%);
+    --color-primary-900: hsl(184, 91%, 17%);
+    --color-primary-950: hsl(184, 100%, 12%);
+
+    /* Secondary Colors */
+    --color-secondary-050: hsl(48, 100%, 97%);
+    --color-secondary-100: hsl(48, 100%, 93%);
+    --color-secondary-200: hsl(48, 100%, 85%);
+    --color-secondary-300: hsl(48, 100%, 75%);
+    --color-secondary-400: hsl(48, 100%, 65%);
+    --color-secondary-500: hsl(48, 100%, 55%);
+    --color-secondary-600: hsl(48, 100%, 45%);
+    --color-secondary-700: hsl(48, 100%, 35%);
+    --color-secondary-800: hsl(48, 100%, 27%);
+    --color-secondary-900: hsl(48, 100%, 20%);
+    --color-secondary-950: hsl(48, 100%, 13%);
+
+    /* Accent Colors */
+    --color-accent-050: hsl(330, 100%, 97%);
+    --color-accent-100: hsl(330, 100%, 93%);
+    --color-accent-200: hsl(330, 90%, 85%);
+    --color-accent-300: hsl(330, 85%, 75%);
+    --color-accent-400: hsl(330, 80%, 65%);
+    --color-accent-500: hsl(330, 75%, 55%);
+    --color-accent-600: hsl(330, 70%, 45%);
+    --color-accent-700: hsl(330, 65%, 35%);
+    --color-accent-800: hsl(330, 60%, 27%);
+    --color-accent-900: hsl(330, 55%, 20%);
+    --color-accent-950: hsl(330, 50%, 13%);
+
+    /* Neutral Colors */
+    --color-neutral-050: hsl(210, 1%, 95%);
     --color-neutral-100: hsl(210, 1%, 90%);
-    --color-neutral-50: hsl(210, 1%, 95%);
-    --color-neutral-25: hsl(210, 1%, 98%);
-
-    /* Supporting */
-    --color-cyan-900: hsl(184, 91%, 17%);
-    --color-cyan-800: hsl(185, 84%, 25%);
-    --color-cyan-700: hsl(185, 81%, 29%);
-    --color-cyan-600: hsl(184, 77%, 34%);
-    --color-cyan-500: hsl(185, 62%, 45%);
-    --color-cyan-400: hsl(185, 57%, 50%);
-    --color-cyan-300: hsl(184, 65%, 59%);
-    --color-cyan-200: hsl(184, 80%, 74%);
-    --color-cyan-100: hsl(185, 94%, 87%);
-    --color-cyan-50:  hsl(186, 100%, 94%);
-
-    /* Font Sizes */
-    --font-size-xxl: 48px;
-    --font-size-xl: 36px;
-    --font-size-lg: 24px;
-    --font-size-md: 20px;
-    --font-size-base: 18px;
-    --font-size-sm: 16px;
-    --font-size-xs: 14px;
+    --color-neutral-200: hsl(210, 2%, 80%);
+    --color-neutral-300: hsl(210, 3%, 70%);
+    --color-neutral-400: hsl(210, 4%, 60%);
+    --color-neutral-500: hsl(210, 5%, 50%);
+    --color-neutral-600: hsl(210, 6%, 40%);
+    --color-neutral-700: hsl(210, 7%, 30%);
+    --color-neutral-800: hsl(210, 8%, 20%);
+    --color-neutral-900: hsl(210, 9%, 15%);
+    --color-neutral-950: hsl(210, 10%, 10%);
 
     /* Font Weights */
     --font-weight-light: 300;
@@ -41,11 +58,46 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
 
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+    --text-8xl: 6rem;
+    --text-9xl: 8rem;
+
+    /* Line Height */
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl--line-height: 1;
+    --text-6xl--line-height: 1;
+    --text-7xl--line-height: 1;
+    --text-8xl--line-height: 1;
+    --text-9xl--line-height: 1;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.05), 0 8px 10px rgba(0, 0, 0, 0.1);
+
     /* Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
-    --radius-full: 9999px;
 
     /* Spacing (4px grid) */
     --space-1: 4px;
@@ -57,21 +109,4 @@
     --space-8: 32px;
     --space-10: 40px;
     --space-12: 48px;
-
-    /* Shadows (two-part) */
-    --shadow-sm:
-        0 1px 2px rgba(0, 0, 0, 0.05),
-        0 1px 1px rgba(0, 0, 0, 0.08);
-
-    --shadow-md:
-        0 4px 6px rgba(0, 0, 0, 0.05),
-        0 2px 4px rgba(0, 0, 0, 0.1);
-
-    --shadow-lg:
-        0 10px 15px rgba(0, 0, 0, 0.05),
-        0 4px 6px rgba(0, 0, 0, 0.1);
-
-    --shadow-xl:
-        0 20px 25px rgba(0, 0, 0, 0.05),
-        0 8px 10px rgba(0, 0, 0, 0.1);
 }
