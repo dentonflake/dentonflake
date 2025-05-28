@@ -1,0 +1,13 @@
+.header {
+    padding: var(--space-5);
+
+    &__logo {
+        font-size: var(--text-xl);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-neutral-050);
+
+        span {
+            color: var(--color-primary-500);
+        }
+    }
+}

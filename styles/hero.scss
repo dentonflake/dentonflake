@@ -1,0 +1,30 @@
+.hero {
+    display: grid;
+    padding: var(--space-5);
+    gap: var(--space-5);
+
+    &__image {
+        width: 100%;
+        border-radius: var(--radius-lg);
+    }
+
+    &__content {
+        display: grid;
+        gap: var(--space-2);
+    }
+
+    &__title {
+        font-size: var(--text-7xl);
+        line-height: var(--text-7xl--line-height);
+        color: var(--color-neutral-050);
+    }
+
+    &__name {
+        color: var(--color-primary-500);
+    }
+
+    &__subtitle {
+        font-size: var(--text-2xl);
+        color: var(--color-neutral-500);
+    }
+}
