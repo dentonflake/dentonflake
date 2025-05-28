@@ -161,11 +161,12 @@ main {
 }
 .tech-stack__category {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-5);
 }
 .tech-stack__subheading {
+  font-weight: var(--font-weight-regular);
   font-size: var(--text-2xl);
-  color: var(--color-secondary-500);
+  color: var(--color-primary-200);
 }
 .tech-stack__list {
   display: flex;
@@ -173,12 +174,11 @@ main {
   gap: 1rem;
 }
 .tech-stack__tag {
-  color: white;
+  color: var(--color-neutral-050);
   padding: 1rem 1rem;
   background-color: var(--color-neutral-900);
 }
 .tech-stack__tag:hover {
-  background-color: var(--color-primary-700);
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -195,10 +195,15 @@ main {
   display: grid;
   gap: var(--space-5);
 }
+@media (min-width: 48rem) {
+  .education__cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 .education__card {
   background-color: var(--color-neutral-900);
   padding: var(--space-5);
-  border-left: solid 10px var(--color-secondary-500);
+  border-left: solid 10px var(--color-primary-500);
   display: grid;
   gap: var(--space-2);
 }
