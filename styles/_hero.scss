@@ -10,9 +10,11 @@
     }
 
     &__image {
-        width: 100%;
+        width: 300px;
         height: 300px;
         object-fit: cover;
+        border-radius: 50%;
+        margin-inline: auto;
 
         @media (min-width: $breakpoint-sm) {
             order: 1;
@@ -22,6 +24,7 @@
     &__content {
         display: grid;
         gap: var(--space-2);
+        text-align: center;
 
         @media (min-width: $breakpoint-sm) {
             display: flex;
@@ -30,8 +33,8 @@
     }
 
     &__title {
-        font-size: var(--text-7xl);
-        line-height: var(--text-7xl--line-height);
+        font-size: var(--text-5xl);
+        line-height: var(--text-5xl--line-height);
         color: var(--color-neutral-050);
     }
 
@@ -46,6 +49,7 @@
 
     &__links {
         display: flex;
+        justify-content: center;
         gap: var(--space-1);
     }
 
