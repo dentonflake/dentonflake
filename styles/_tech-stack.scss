@@ -1,0 +1,33 @@
+.tech-stack {
+    display: grid;
+    gap: var(--space-5);
+    padding: var(--space-5);
+
+    &__title {
+        color: var(--color-neutral-050);
+        font-size: var(--text-4xl);
+    }
+
+    &__category {
+
+        display: grid;
+        gap: var(--space-2);
+
+        h3 {
+            font-size: var(--text-2xl);
+            color: var(--color-secondary-400)
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            p {
+                color: white;
+                padding: 1rem 1rem;
+                background-color: var(--color-neutral-900);
+            }
+        }
+    }
+}
