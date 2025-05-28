@@ -155,7 +155,7 @@ main {
   display: flex;
   gap: var(--space-1);
 }
-.hero__link svg {
+.hero__svg {
   display: block;
   width: 30px;
   color: var(--color-neutral-200);

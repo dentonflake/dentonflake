@@ -49,12 +49,9 @@
         gap: var(--space-1);
     }
 
-    &__link {
-
-        svg {
-            display: block;
-            width: 30px;
-            color: var(--color-neutral-200);
-        }
+    &__svg {
+        display: block;
+        width: 30px;
+        color: var(--color-neutral-200);
     }
 }
