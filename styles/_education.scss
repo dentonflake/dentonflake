@@ -1,0 +1,10 @@
+.education {
+    display: grid;
+    gap: var(--space-5);
+    padding: var(--space-5);
+
+    &__heading {
+        color: var(--color-neutral-050);
+        font-size: var(--text-4xl);
+    }
+}
