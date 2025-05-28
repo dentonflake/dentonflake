@@ -197,7 +197,7 @@ main {
 }
 @media (min-width: 48rem) {
   .education__cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .education__card {
