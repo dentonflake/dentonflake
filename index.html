@@ -2,50 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Denton Flake</title>
 
-    <meta name="author" content="Denton Flake">
-    <meta name="description" content="Portfolio website">
+    <meta name="author" content="Denton Flake" />
+    <meta name="description" content="My personal portfolio." />
 
-    <link rel="stylesheet" href="./styles/root.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" />
 </head>
 
 <body>
-    <header>
-        <p class="logo">D<span>/</span>F</p>
+    <header class="header">
+        <p class="header__logo">D<span>/</span>F</p>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <p class="title">Software Developer</p>
 
-                <h1>Hello! I'm <span>Denton Flake</span></h1>
-
-                <div class="stats">
-                    <div class="stat age"><span>2</span></div>
-                    <div class="stat experience"><span>0</span></div>
-                    <div class="stat certifications"><span>0</span></div>
-                    <div class="stat deployed"><span>2</span></div>
-                </div>
+            <div class="hero__image">
+                <img src="./images/profile.webp" alt="Denton Flake" />
             </div>
 
-            <div class="hero-profile">
-                <img src="./images/profile.webp" alt="Profile photo of Denton Flake">
+            <div class="hero__content">
+                <h1 class="hero__title">Hello! I'm <span class="hero__name">Denton Flake</span></h1>
+                <p class="hero__subtitle">Software Developer</p>
             </div>
+
         </section>
     </main>
 
-    <footer>
-        <p>Created By: @dentonflake</p>
+    <footer class="footer">
+        <p class="footer__message">Created By: @dentonflake</p>
     </footer>
 </body>
 
