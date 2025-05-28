@@ -104,6 +104,8 @@ body {
 main {
   max-width: 900px;
   margin-inline: auto;
+  display: grid;
+  gap: var(--space-10);
 }
 
 .hero {
