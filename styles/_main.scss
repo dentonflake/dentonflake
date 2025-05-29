@@ -4,12 +4,12 @@ main {
     display: grid;
     gap: var(--space-5);
 
-    @media (min-width: 29.375rem) {
-        max-width: 29.375rem;
+    @media (min-width: 30rem) {
+        max-width: 30rem;
     }
 
-    @media (min-width: 50rem) {
-        max-width: 50rem;
+    @media (min-width: 51rem) {
+        max-width: 51rem;
     }
 
     @media (min-width: 75rem) {

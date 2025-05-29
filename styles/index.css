@@ -106,14 +106,14 @@ main {
   display: grid;
   gap: var(--space-5);
 }
-@media (min-width: 29.375rem) {
+@media (min-width: 30rem) {
   main {
-    max-width: 29.375rem;
+    max-width: 30rem;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 51rem) {
   main {
-    max-width: 50rem;
+    max-width: 51rem;
   }
 }
 @media (min-width: 75rem) {
@@ -143,13 +143,14 @@ main {
 @media (min-width: 50rem) {
   .hero__image {
     border-radius: 0;
+    box-shadow: 1rem 1rem var(--color-primary-800);
     order: 1;
   }
 }
 @media (min-width: 75rem) {
   .hero__image {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
 }
 .hero__content {

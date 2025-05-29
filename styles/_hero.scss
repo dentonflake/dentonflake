@@ -16,12 +16,13 @@
 
         @media (min-width: 50rem) {
             border-radius: 0;
+            box-shadow: 1rem 1rem var(--color-primary-800);
             order: 1;
         }
 
         @media (min-width: 75rem) {
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
         }
     }
 
