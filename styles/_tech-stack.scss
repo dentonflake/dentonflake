@@ -7,6 +7,15 @@
         color: var(--color-neutral-050);
         font-size: var(--text-4xl);
         text-align: center;
+
+        @media (min-width: 50rem) {
+            text-align: left;
+        }
+
+        @media (min-width: 75rem) {
+            font-size: var(--text-5xl);
+            line-height: var(--text-5xl--line-height);
+        }
     }
 
     &__category {
@@ -19,6 +28,15 @@
         font-size: var(--text-2xl);
         color: var(--color-primary-200);
         text-align: center;
+
+        @media (min-width: 50rem) {
+            text-align: left;
+        }
+
+        @media (min-width: 75rem) {
+            font-size: var(--text-3xl);
+            line-height: var(--text-3xl--line-height);
+        }
     }
 
     &__list {
@@ -26,12 +44,25 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+
+        @media (min-width: 50rem) {
+            justify-content: start;
+        }
+
+        @media (min-width: 75rem) {
+            gap: 1.5rem;
+        }
     }
 
     &__tag {
         color: var(--color-neutral-050);
-        padding: 1rem 1rem;
+        padding: 1rem 1.5rem;
         background-color: var(--color-neutral-900);
+
+        @media (min-width: 75rem) {
+            padding: 1.5rem 2rem;
+            font-size: var(--text-3xl);
+        }
     }
 
     &__tag:hover {

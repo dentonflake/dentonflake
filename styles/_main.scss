@@ -1,7 +1,18 @@
 main {
-    max-width: 900px;
     margin-inline: auto;
 
     display: grid;
-    gap: var(--space-10);
+    gap: var(--space-5);
+
+    @media (min-width: 29.375rem) {
+        max-width: 29.375rem;
+    }
+
+    @media (min-width: 50rem) {
+        max-width: 50rem;
+    }
+
+    @media (min-width: 75rem) {
+        max-width: 75rem;
+    }
 }
