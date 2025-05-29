@@ -202,7 +202,7 @@ main {
 .hero__links {
   display: flex;
   justify-content: center;
-  gap: var(--space-1);
+  gap: var(--space-3);
 }
 @media (min-width: 50rem) {
   .hero__links {
