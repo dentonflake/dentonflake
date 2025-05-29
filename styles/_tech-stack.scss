@@ -73,6 +73,7 @@
     }
 
     &__tag:hover {
+        background-color: var(--color-primary-600);
         transition: background-color 0.2s ease-in-out;
     }
 }
