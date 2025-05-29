@@ -351,6 +351,9 @@ main {
   font-size: var(--text-xs);
   color: var(--color-neutral-500);
 }
+.footer__message span {
+  color: var(--color-neutral-300);
+}
 
 * {
   margin: 0;

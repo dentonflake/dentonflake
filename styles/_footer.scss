@@ -7,5 +7,9 @@
     &__message {
         font-size: var(--text-xs);
         color: var(--color-neutral-500);
+
+        span {
+            color: var(--color-neutral-300);
+        }
     }
 }
