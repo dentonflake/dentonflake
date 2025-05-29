@@ -339,22 +339,6 @@ main {
   color: var(--color-neutral-500);
 }
 
-.about {
-  display: grid;
-  gap: var(--space-5);
-  padding: var(--space-5);
-}
-.about__heading {
-  color: var(--color-neutral-050);
-  font-size: var(--text-3xl);
-  text-align: center;
-}
-@media (min-width: 50rem) {
-  .about__heading {
-    text-align: left;
-  }
-}
-
 .footer {
   padding: var(--space-5);
   display: flex;

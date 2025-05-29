@@ -12,4 +12,10 @@
             text-align: left;
         }
     }
+
+    &__content {
+        display: grid;
+        gap: var(--space-4);
+        color: var(--color-neutral-050);
+    }
 }
