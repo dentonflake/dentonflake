@@ -13,8 +13,8 @@
         }
 
         @media (min-width: 75rem) {
-            font-size: var(--text-5xl);
-            line-height: var(--text-5xl--line-height);
+            font-size: var(--text-3xl);
+            line-height: var(--text-3xl--line-height);
         }
     }
 
@@ -34,8 +34,8 @@
         }
 
         @media (min-width: 75rem) {
-            font-size: var(--text-3xl);
-            line-height: var(--text-3xl--line-height);
+            font-size: var(--text-xl);
+            line-height: var(--text-xl--line-height);
         }
     }
 
@@ -59,9 +59,16 @@
         padding: 1rem 1.5rem;
         background-color: var(--color-neutral-900);
 
+        display: flex;
+        align-items: center;
+        gap: var(--space-1);
+
+        img {
+            width: 20px;
+        }
+
         @media (min-width: 75rem) {
-            padding: 1.5rem 2rem;
-            font-size: var(--text-3xl);
+            font-size: var(--text-lg);
         }
     }
 

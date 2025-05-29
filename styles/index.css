@@ -232,8 +232,8 @@ main {
 }
 @media (min-width: 75rem) {
   .tech-stack__heading {
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl--line-height);
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
   }
 }
 .tech-stack__category {
@@ -253,8 +253,8 @@ main {
 }
 @media (min-width: 75rem) {
   .tech-stack__subheading {
-    font-size: var(--text-3xl);
-    line-height: var(--text-3xl--line-height);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
   }
 }
 .tech-stack__list {
@@ -277,11 +277,16 @@ main {
   color: var(--color-neutral-050);
   padding: 1rem 1.5rem;
   background-color: var(--color-neutral-900);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.tech-stack__tag img {
+  width: 20px;
 }
 @media (min-width: 75rem) {
   .tech-stack__tag {
-    padding: 1.5rem 2rem;
-    font-size: var(--text-3xl);
+    font-size: var(--text-lg);
   }
 }
 .tech-stack__tag:hover {
@@ -295,7 +300,7 @@ main {
 }
 .education__heading {
   color: var(--color-neutral-050);
-  font-size: var(--text-4xl);
+  font-size: var(--text-3xl);
   text-align: center;
 }
 @media (min-width: 50rem) {
@@ -318,15 +323,36 @@ main {
   border-left: solid 10px var(--color-primary-500);
   display: grid;
   gap: var(--space-2);
+  text-align: center;
+}
+@media (min-width: 50rem) {
+  .education__card {
+    text-align: left;
+  }
 }
 .education__achievement {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   color: var(--color-neutral-050);
-  text-align: center;
 }
 .education__name {
+  font-size: var(--text-sm);
   color: var(--color-neutral-500);
+}
+
+.about {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.about__heading {
+  color: var(--color-neutral-050);
+  font-size: var(--text-3xl);
   text-align: center;
+}
+@media (min-width: 50rem) {
+  .about__heading {
+    text-align: left;
+  }
 }
 
 .footer {
