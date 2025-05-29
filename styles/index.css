@@ -326,7 +326,7 @@ main {
 .education__card {
   background-color: var(--color-neutral-900);
   padding: var(--space-5);
-  border-left: solid 10px var(--color-primary-500);
+  border-left: solid 0.5rem var(--color-primary-500);
   display: grid;
   gap: var(--space-2);
   text-align: center;
@@ -343,6 +343,45 @@ main {
 .education__name {
   font-size: var(--text-sm);
   color: var(--color-neutral-500);
+}
+
+.timeline {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.timeline__heading {
+  color: var(--color-neutral-050);
+  font-size: var(--text-3xl);
+  text-align: center;
+}
+@media (min-width: 50rem) {
+  .timeline__heading {
+    text-align: left;
+  }
+}
+.timeline__events {
+  display: grid;
+  gap: var(--space-8);
+  padding: 0 0 0 var(--space-8);
+  border-left: solid 0.5rem var(--color-primary-500);
+}
+.timeline__event {
+  background-color: var(--color-neutral-900);
+  padding: var(--space-5);
+  position: relative;
+  color: white;
+}
+.timeline__event:before {
+  content: "";
+  background: inherit;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  transform: rotate(45deg);
+  z-index: -1;
 }
 
 .footer {

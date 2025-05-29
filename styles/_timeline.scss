@@ -1,0 +1,46 @@
+.timeline {
+    display: grid;
+    gap: var(--space-5);
+    padding: var(--space-5);
+
+    &__heading {
+        color: var(--color-neutral-050);
+        font-size: var(--text-3xl);
+        text-align: center;
+
+        @media (min-width: 50rem) {
+            text-align: left;
+        }
+    }
+
+    &__container {
+        // padding: var(--space-8);
+    }
+
+    &__events {
+        display: grid;
+        gap: var(--space-8);
+        padding: 0 0 0 var(--space-8);
+        border-left: solid 0.5rem var(--color-primary-500);
+    }
+
+    &__event {
+        background-color: var(--color-neutral-900);
+        padding: var(--space-5);
+
+        position: relative;
+        color: white;
+
+        &:before {
+            content: '';
+            background: inherit;
+            width: 30px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            left: -10px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    }
+}
