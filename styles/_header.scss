@@ -7,9 +7,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: 50rem) {
-        position: absolute;
-    }
+    position: absolute;
 
     &__logo {
         font-size: var(--text-xl);

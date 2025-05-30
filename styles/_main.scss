@@ -2,7 +2,7 @@ main {
     margin-inline: auto;
 
     display: grid;
-    gap: var(--space-5);
+    gap: var(--space-12);
 
     @media (min-width: 30rem) {
         max-width: 30rem;
