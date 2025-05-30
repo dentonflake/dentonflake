@@ -91,6 +91,15 @@ body {
 
 .header {
   padding: var(--space-5);
+  width: 100%;
+  background-color: var(--color-neutral-950);
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 50rem) {
+  .header {
+    position: absolute;
+  }
 }
 .header__logo {
   font-size: var(--text-xl);
@@ -130,6 +139,8 @@ main {
 @media (min-width: 50rem) {
   .hero {
     grid-template-columns: 2fr 1fr;
+    height: 100vh;
+    align-items: center;
   }
 }
 .hero__image {
