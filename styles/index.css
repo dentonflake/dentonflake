@@ -504,6 +504,11 @@ main {
 }
 @media (min-width: 51rem) {
   .hobbies__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 75rem) {
+  .hobbies__cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
