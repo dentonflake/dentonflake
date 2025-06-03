@@ -82,7 +82,7 @@
 }
 
 body {
-  background-color: var(--color-neutral-950);
+  background: var(--color-neutral-950);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: var(--font-weight-regular);
@@ -92,7 +92,6 @@ body {
 .header {
   padding: var(--space-5);
   width: 100%;
-  background-color: var(--color-neutral-950);
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -243,7 +242,7 @@ main {
 .hero__svg {
   display: block;
   width: 1.5rem;
-  color: var(--color-neutral-700);
+  color: var(--color-neutral-600);
 }
 @media (min-width: 75rem) {
   .hero__svg {
@@ -325,11 +324,6 @@ main {
   .tech-stack__tag {
     font-size: var(--text-lg);
   }
-}
-.tech-stack__tag:hover {
-  color: var(--color-neutral-950);
-  background-color: var(--color-primary-050);
-  transition: 0.2s ease-in-out;
 }
 
 .education {

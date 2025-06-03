@@ -72,10 +72,4 @@
             font-size: var(--text-lg);
         }
     }
-
-    &__tag:hover {
-        color: var(--color-neutral-950);
-        background-color: var(--color-primary-050);
-        transition: 0.2s ease-in-out;
-    }
 }
