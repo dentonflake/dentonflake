@@ -4,6 +4,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     position: absolute;
 
@@ -19,12 +20,13 @@
 
     &__nav {
         display: flex;
-        gap: var(--space-5);
+        gap: var(--space-2);
     }
 
     &__link {
         text-decoration: none;
         color: var(--color-neutral-050);
+        padding: var(--space-2) var(--space-3);
     }
 
     &__link:hover {
@@ -34,6 +36,8 @@
     }
 
     &__active {
+        background-color: var(--color-neutral-900);
+        border-radius: var(--radius-md);
         color: var(--color-primary-300);
     }
 
