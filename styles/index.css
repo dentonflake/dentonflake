@@ -82,7 +82,7 @@
 }
 
 body {
-  background: var(--color-neutral-950);
+  background-color: var(--color-neutral-950);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: var(--font-weight-regular);
@@ -242,7 +242,7 @@ main {
 .hero__svg {
   display: block;
   width: 1.5rem;
-  color: var(--color-neutral-600);
+  color: var(--color-neutral-700);
 }
 @media (min-width: 75rem) {
   .hero__svg {
@@ -437,6 +437,28 @@ main {
   left: -3.93rem;
   top: 1rem;
   z-index: 1;
+}
+
+.about {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.about__heading {
+  color: var(--color-neutral-050);
+  font-size: var(--text-4xl);
+  text-align: center;
+}
+@media (min-width: 51rem) {
+  .about__heading {
+    text-align: left;
+  }
+}
+@media (min-width: 75rem) {
+  .about__heading {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
 }
 
 .footer {
