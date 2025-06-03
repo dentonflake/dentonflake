@@ -17,4 +17,19 @@
             line-height: var(--text-5xl--line-height);
         }
     }
+
+    &__content {
+        display: grid;
+    }
+
+    &__details {
+        display: grid;
+        gap: var(--space-5);
+    }
+
+    &__text {
+        color: var(--color-neutral-300);
+        font-size: var(--text-lg);
+        line-height: var(--text-lg--line-height);
+    }
 }

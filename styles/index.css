@@ -460,6 +460,18 @@ main {
     line-height: var(--text-5xl--line-height);
   }
 }
+.about__content {
+  display: grid;
+}
+.about__details {
+  display: grid;
+  gap: var(--space-5);
+}
+.about__text {
+  color: var(--color-neutral-300);
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+}
 
 .footer {
   padding: var(--space-5);
