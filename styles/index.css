@@ -477,6 +477,58 @@ main {
   line-height: var(--text-lg--line-height);
 }
 
+.hobbies {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.hobbies__heading {
+  color: var(--color-neutral-050);
+  font-size: var(--text-4xl);
+  text-align: center;
+}
+@media (min-width: 51rem) {
+  .hobbies__heading {
+    text-align: left;
+  }
+}
+@media (min-width: 75rem) {
+  .hobbies__heading {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+}
+.hobbies__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.hobbies__card {
+  background-color: var(--color-neutral-900);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.hobbies__card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hobbies__content {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+.hobbies__title {
+  font-size: var(--text-3xl);
+  color: var(--color-neutral-050);
+}
+.hobbies__description {
+  color: var(--color-neutral-500);
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+}
+
 .footer {
   padding: var(--space-5);
   display: flex;
