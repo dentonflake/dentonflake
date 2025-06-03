@@ -1,28 +1,33 @@
-# Hey 👋, I am Denton Flake
+# 👋 Hey there! I'm Denton Flake
 
-## Contact
+### 👨🏼‍💻 Software Developer | 🤖 Creater | 🔨 Problem Solver
 
-- 📫 Email me at **me@dentonflake.com**
+---
 
-- 👨‍💻 Visit my website: [dentonflake.com](https://www.dentonflake.com)
+## 🚀 About Me
 
-## About
+I'm Denton — a curious builder, lifelong learner, and human behind the keyboard. Coding has not only started to shape my career but it has also helped me discover my passion for helping people. My love for coding traces back to my youth where I was captivated by the idea of creating something out of nothing.
 
-- 👨‍💼 I am 22 years old. I love photography, fishing, and being outdoors. I have 3 years of personal experience with coding. It is one of my favorite hobbies.
+Over the last 8 years, I have developed many professional and personal projects. Each project has honed my skills in problem-solving, team work, and innovation, enabling me to turn complex challenges into simple, impactful solutions that benefit others.
 
+But more than that, I’m a husband, a thinker, and someone who believes that work should serve a purpose greater than the task list.
 
+---
 
-<!--
-**dentonflake/dentonflake** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🎯 What I'm Working Toward
 
-Here are some ideas to get you started:
+- Building tools that simplify people’s lives
+- Mastering full-stack development
+- Strengthening my relationship with my family
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🛠️ Tech Toolbox
+
+```ts
+const toolbox = {
+  frontend: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript"],
+  backend: ["Node.js", "Python", "C#"],
+  databases: ["MySQL", "PostgreSQL"],
+  devTools: ["Git", "GitHub", "NPM", "VS Code"]
+};
