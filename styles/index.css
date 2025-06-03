@@ -105,6 +105,25 @@ body {
 .header__logo span {
   color: var(--color-primary-500);
 }
+.header__nav {
+  display: flex;
+  gap: var(--space-5);
+}
+.header__link {
+  text-decoration: none;
+  color: var(--color-neutral-050);
+}
+.header__link:hover {
+  text-decoration: none;
+  color: var(--color-neutral-400);
+  transition: 0.2s;
+}
+.header__active {
+  color: var(--color-primary-300);
+}
+.header__active:hover {
+  color: var(--color-primary-300);
+}
 
 main {
   margin-inline: auto;
@@ -386,11 +405,14 @@ main {
     line-height: var(--text-5xl--line-height);
   }
 }
+.timeline__container {
+  padding: 0 0 0 var(--space-5);
+}
 .timeline__events {
   display: grid;
   gap: var(--space-8);
-  padding: 0 0 0 var(--space-8);
-  border-left: solid 0.5rem var(--color-primary-500);
+  padding: 0 0 0 var(--space-10);
+  border-left: 0.5rem var(--color-primary-500) double;
 }
 .timeline__event {
   background-color: var(--color-neutral-900);
@@ -408,6 +430,19 @@ main {
   left: -10px;
   transform: rotate(45deg);
   z-index: -1;
+}
+.timeline__event:after {
+  content: "";
+  background-color: var(--color-neutral-950);
+  border: 0.25rem solid var(--color-primary-500);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: -3.93rem;
+  top: 1rem;
+  z-index: 1;
 }
 
 .footer {
