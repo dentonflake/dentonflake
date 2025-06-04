@@ -224,7 +224,7 @@ main {
 }
 .hero__subtitle {
   font-size: var(--text-xl);
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-300);
 }
 @media (min-width: 75rem) {
   .hero__subtitle {
@@ -241,6 +241,9 @@ main {
   .hero__links {
     justify-content: start;
   }
+}
+.hero__link {
+  color: var(--color-neutral-050);
 }
 .hero__svg {
   display: block;
@@ -378,7 +381,7 @@ main {
 }
 .education__name {
   font-size: var(--text-sm);
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-300);
 }
 
 .timeline {
@@ -532,7 +535,7 @@ main {
   color: var(--color-neutral-050);
 }
 .hobbies__description {
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-300);
   font-size: var(--text-base);
   line-height: var(--text-base--line-height);
 }
