@@ -56,14 +56,15 @@ const saveMessageToLocalStorage = (message) => {
     localStorage.setItem('messages', JSON.stringify(messages));
 }
 
-const messages = loadMessagesFromLocalStorage();
 const { user, message } = parseURLSearchParams(params);
 const { characters, vowels, mostUsedCharacter } = getMessageStats(message);
 
-textHeading.innerHTML = `Thank you <span>${user}!</span>`;
-textMessage.textContent = `You have submitted ${messages.length + 1} messages in total. This message had ${characters.length} characters, ${vowels.length} vowels, and your most used character was a "${mostUsedCharacter}".`;
-
 saveMessageToLocalStorage(message);
+
+const messages = loadMessagesFromLocalStorage();
+
+textHeading.innerHTML = `Thank you <span>${user}!</span>`;
+textMessage.textContent = `You have submitted ${messages.length} messages in total. This message had ${characters.length} characters, ${vowels.length} vowels, and your most used character was a "${mostUsedCharacter}".`;
 
 // Event handler
 buttonReturn.addEventListener('click', () => {
