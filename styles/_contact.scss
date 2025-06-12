@@ -33,6 +33,11 @@
         gap: var(--space-5);
     }
 
+    &__label {
+        color: var(--color-neutral-200);
+        font-weight: var(--font-weight-semibold);
+    }
+
     &__input {
         background-color: var(--color-neutral-900);
         border: none;
@@ -49,11 +54,15 @@
         padding: var(--space-3) var(--space-10);
         justify-self: right;
         font-size: var(--text-lg);
-        font-weight: var(--font-weight-semibold);
         background-color: var(--color-primary-300);
         border: none;
         border-radius: var(--radius-md);
-        color: var(--color-neutral-900);
+        color: var(--color-primary-950);
+    }
+
+    &__submit:hover {
+        background-color: var(--color-primary-600);
+        transition: 0.2s;
     }
 
     &__input::placeholder {

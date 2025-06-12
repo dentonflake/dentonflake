@@ -1,0 +1,40 @@
+.confirm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-5);
+    gap: var(--space-5);
+
+    min-height: 100vh;
+    text-align: center;
+
+    &__heading {
+        font-size: var(--text-7xl);
+        line-height: var(--text-7xl--line-height);
+        color: var(--color-neutral-050);
+
+        span {
+            color: var(--color-primary-500);
+        }
+    }
+
+    &__message {
+        color: var(--color-neutral-050);
+    }
+
+    &__button {
+        padding: var(--space-3) var(--space-10);
+        font-size: var(--text-lg);
+        background-color: var(--color-primary-300);
+        border: none;
+        border-radius: var(--radius-md);
+        color: var(--color-primary-950);
+        align-self: center;
+        max-width: max-content;
+    }
+
+    &__button:hover {
+        background-color: var(--color-primary-600);
+        transition: 0.2s;
+    }
+}

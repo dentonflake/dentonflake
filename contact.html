@@ -69,9 +69,16 @@
             <h2 class="contact__heading">Connect</h2>
             <div class="contact__content">
                 <p class="contact__description">Like what you see? Send me a note!</p>
-                <form class="contact__form" action="#">
-                    <textarea class="contact__input" name="" id="" placeholder="I just wanted to say..." required></textarea>
+                <form class="contact__form" action="confirm.html" id="contact-form">
+
+                    <label class="contact__label" for="user">Name <span>*</span></label>
+                    <input class="contact__input" type="text" id="user" name="user" placeholder="E.g. John Doe" required>
+
+                    <label class="contact__label" for="message">Message <span>*</span></label>
+                    <textarea class="contact__input" id="message" name="message" placeholder="I just wanted to say..." required></textarea>
+
                     <button class="contact__submit" type="submit">Send</button>
+
                 </form>
             </div>
         </section>
