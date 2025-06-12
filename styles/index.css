@@ -595,7 +595,7 @@ main {
   background-color: var(--color-primary-300);
   border: none;
   border-radius: var(--radius-md);
-  color: var(--color-primary-950);
+  color: var(--color-neutral-950);
 }
 .contact__submit:hover {
   background-color: var(--color-primary-600);
@@ -634,7 +634,7 @@ main {
   background-color: var(--color-primary-300);
   border: none;
   border-radius: var(--radius-md);
-  color: var(--color-primary-950);
+  color: var(--color-neutral-950);
   align-self: center;
   max-width: -moz-max-content;
   max-width: max-content;
