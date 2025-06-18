@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
     return (
         <>
-
-
 
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,6 +15,8 @@ export default function Home() {
                 <meta name="author" content="Denton Flake" />
                 <meta name="description" content="Denton Flake's personal portfolio website." />
             </Head>
+
+            
 
 
 
