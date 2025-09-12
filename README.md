@@ -1,33 +1,36 @@
-# 👋 Hey there! I'm Denton Flake
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-### 👨🏼‍💻 Software Developer | 🤖 Creater | 🔨 Problem Solver
+## Getting Started
 
----
+First, run the development server:
 
-## 🚀 About Me
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-I'm Denton — a curious builder, lifelong learner, and human behind the keyboard. Coding has not only started to shape my career but it has also helped me discover my passion for helping people. My love for coding traces back to my youth where I was captivated by the idea of creating something out of nothing.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Over the last 8 years, I have developed many professional and personal projects. Each project has honed my skills in problem-solving, team work, and innovation, enabling me to turn complex challenges into simple, impactful solutions that benefit others.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-But more than that, I’m a husband, a thinker, and someone who believes that work should serve a purpose greater than the task list.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## 🎯 What I'm Working Toward
+To learn more about Next.js, take a look at the following resources:
 
-- Building tools that simplify people’s lives
-- Mastering full-stack development
-- Strengthening my relationship with my family
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 🛠️ Tech Toolbox
+## Deploy on Vercel
 
-```ts
-const toolbox = {
-  frontend: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript"],
-  backend: ["Node.js", "Python", "C#"],
-  databases: ["MySQL", "PostgreSQL"],
-  devTools: ["Git", "GitHub", "NPM", "VS Code"]
-};
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
