@@ -17,7 +17,10 @@ const Hero = () => {
           priority
         ></Image>
 
-        <h1 className={styles.title}>Hello! I&apos;m <span className={styles.name}>Denton Flake</span></h1>
+        <div className={styles.social}>
+          <p className={styles.subtitle}>Software Developer</p>
+          <h1 className={styles.title}>Hello! I&apos;m <span className={styles.name}>Denton Flake</span></h1>
+        </div>
 
       </div>
 
