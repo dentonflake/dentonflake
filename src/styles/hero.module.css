@@ -1,0 +1,35 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-9);
+  padding: var(--space-5);
+}
+
+.image {
+  border-radius: 50%;
+  border: 0.33rem solid var(--color-primary-500);
+  padding: 0.66rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-5xl--line-height);
+}
+
+.name {
+  color: var(--color-primary-500);
+}
+
+.subtitle {
+  color: var(--color-neutral-300);
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
+}

@@ -3,46 +3,28 @@ import Link from "next/link"
 import styles from "@/styles/hero.module.css"
 
 const links = [
-  { name: "GitHub", href: "https://github.com/dentonflake", icon: "" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/dentonflake/", icon: "" },
-  { name: "Instagram", href: "https://www.instagram.com/dentonflake/", icon: "" },
-  { name: "Facebook", href: "https://www.facebook.com/dentonflake/", icon: "" }
+  { name: "GitHub", href: "https://github.com/dentonflake", icon: "/images/icon-github.png" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/dentonflake/", icon: "/images/icon-github.png" },
+  { name: "Instagram", href: "https://www.instagram.com/dentonflake/", icon: "/images/icon-github.png" },
+  { name: "Facebook", href: "https://www.facebook.com/dentonflake/", icon: "/images/icon-github.png" }
 ]
 
 const Hero = () => {
 
   return (
-    <section>
+    <section className={styles.hero}>
 
       <Image
+        className={styles.image}
         src="/images/profile.png"
         alt="Memoji of Denton Flake"
-        width={420}
-        height={420}
+        width={300}
+        height={300}
         priority
       ></Image>
 
-      <div>
-        <p>Software Developer</p>
-        <h1>Hello! I'm <span>Denton Flake</span></h1>
-        <nav>
-          {
-            links.map(link => (
-              <Link
-                key={link.name}
-                className={styles.link}
-                href={link.href}
-              >
-                <Image
-                  src=""
-                  alt={`${link.name} Icon`}
-                  width={0}
-                  height={0}
-                ></Image>
-              </Link>
-            ))
-          }
-        </nav>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Hello! I'm <span className={styles.name}>Denton Flake</span></h1>
       </div>
 
     </section>
