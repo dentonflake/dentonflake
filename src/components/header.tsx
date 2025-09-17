@@ -1,9 +1,9 @@
 'use client'
 
 import styles from '@/styles/header.module.css'
-import { usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation'
 import Link from "next/link"
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 const links = [
   { name: "Home", href: "/" },
