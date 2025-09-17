@@ -1,6 +1,7 @@
-import "@/app/globals.css"
+import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
+import Header from '@/components/header'
 
 const montserrat = Montserrat()
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${montserrat.className}`}>
+        <Header></Header>
         {children}
       </body>
     </html>
