@@ -19,6 +19,9 @@
   border-radius: 50%;
   border: 0.33rem solid var(--color-primary-500);
   padding: 0.66rem;
+
+  width: 20rem;
+  height: auto;
 }
 
 .title {
@@ -64,7 +67,8 @@
   .image {
     border: none;
     border-radius: 0;
-    width: 20rem;
+
+    width: 30rem;
     height: auto;
   }
 }
@@ -84,7 +88,7 @@
   }
 
   .image {
-    width: 30rem;
+    width: 40rem;
     height: auto;
   }
 }

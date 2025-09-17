@@ -12,8 +12,8 @@ const Hero = () => {
           className={styles.image}
           src="/images/profile.png"
           alt="Memoji of Denton Flake"
-          width={300}
-          height={300}
+          width={420}
+          height={420}
           priority
         ></Image>
 
