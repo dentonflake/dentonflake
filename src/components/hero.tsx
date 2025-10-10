@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from "@/styles/hero.module.css"
+import BlurText from "./BlurText"
 
 const Hero = () => {
 
@@ -19,7 +20,18 @@ const Hero = () => {
 
         <div className={styles.social}>
           <p className={styles.subtitle}>Software Developer</p>
-          <h1 className={styles.title}>Hello! I&apos;m <span className={styles.name}>Denton Flake</span></h1>
+
+          <h1 className={styles.title}>
+            Hello! I&apos;m
+            <BlurText
+              text="Denton Flake"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className={styles.name}
+            />
+          </h1>
+
         </div>
 
       </div>
