@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
-import Header from '@/components/Header'
+import Header from '@/components/testHeader'
 import Footer from '@/components/Footer'
 
 const montserrat = Montserrat()
