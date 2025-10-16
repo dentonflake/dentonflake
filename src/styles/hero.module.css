@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
 
-  min-height: 80vh;
+  padding: var(--space-9) 0;
+
+  background-color: var(--color-neutral-950);
 }
 
 .content {
@@ -13,12 +15,13 @@
   gap: var(--space-5);
 
   max-width: 25rem;
+  width: 100%;
 }
 
 .image {
   border-radius: 50%;
-  border: 0.33rem solid var(--color-primary-500);
-  padding: 0.66rem;
+  border: var(--space-2) solid var(--color-primary-500);
+  padding: var(--space-3);
 
   width: 20rem;
   height: auto;
@@ -48,6 +51,7 @@
 
   .content {
     flex-direction: row-reverse;
+    justify-content: space-between;
 
     max-width: 50rem;
   }
@@ -68,7 +72,7 @@
     border: none;
     border-radius: 0;
 
-    width: 30rem;
+    width: 15rem;
     height: auto;
   }
 }

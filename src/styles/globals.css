@@ -95,3 +95,7 @@ body {
   background-color: var(--color-neutral-950);
   color: var(--color-neutral-050);
 }
+
+h2 {
+  font-size: var(--text-4xl);
+}

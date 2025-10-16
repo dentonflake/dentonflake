@@ -1,29 +1,40 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
-import Header from '@/components/header'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const montserrat = Montserrat()
 
 export const metadata: Metadata = {
-  title: 'Denton Flake',
+  title: {
+    default: 'Denton Flake',
+    template: '%s | Denton Flake',
+  },
   description: 'Welcome to Denton Flake\'s personal portfolio. Explore my projects, skills, and experience in web development and software engineering.',
   openGraph: {
-    title: 'Denton Flake',
+    title: {
+      default: 'Denton Flake | Portfolio',
+      template: '%s | Denton Flake',
+    },
     description: 'Welcome to Denton Flake\'s personal portfolio. Explore my projects, skills, and experience in web development and software engineering.',
     url: 'https://dentonflake.com',
-    siteName: 'Denton Flake',
-    // images: [{ url: '' }]
+    siteName: 'Denton Flake'
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en">
       <body className={`${montserrat.className}`}>
         <Header></Header>
-        {children}
+        <main>
+          {children}
+        </main>
+        <Footer></Footer>
       </body>
     </html>
   );
 }
+
+export default RootLayout
