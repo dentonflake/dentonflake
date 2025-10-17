@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Projects'
 };
 
-const About = () => {
+const About = async () => {
 
   return (
     <section className={styles.about}>
