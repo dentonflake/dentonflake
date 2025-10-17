@@ -25,6 +25,8 @@
 
   width: 20rem;
   height: auto;
+
+  animation: fadeInTop 0.75s ease both;
 }
 
 .title {
@@ -45,6 +47,7 @@
 
 .name {
   color: var(--color-primary-500);
+  animation: fadeOutTop 0.75s ease both;
 }
 
 @media (min-width: 55rem) {
@@ -94,5 +97,42 @@
   .image {
     width: 25rem;
     height: auto;
+    animation: fadeInRight 0.75s ease both;
+  }
+}
+
+@keyframes fadeOutTop {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -23,13 +23,7 @@ const Hero = () => {
 
           <h1 className={styles.title}>
             Hello! I&apos;m
-            <BlurText
-              text="Denton Flake"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              className={styles.name}
-            />
+            <p className={styles.name}>Denton Flake</p>
           </h1>
 
         </div>

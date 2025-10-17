@@ -2,6 +2,8 @@
 .link {
   text-decoration: none;
   color: var(--color-neutral-050);
+
+  animation: fadeOutTop 0.5s ease both;
 }
 
 .project {
@@ -37,4 +39,35 @@
 .description {
   font-size: var(--text-base);
   line-height: var(--text-base--line-height);
+}
+
+@media (min-width: 45rem) {
+
+  .link {
+    animation: fadeInRight 0.5s ease both;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutTop {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
