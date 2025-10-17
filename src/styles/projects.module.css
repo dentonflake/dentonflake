@@ -1,0 +1,20 @@
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 45rem) {
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 65rem) {
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

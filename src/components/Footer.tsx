@@ -26,7 +26,9 @@ const lists = [
   {
     name: 'My Projects',
     links: [
-      { name: 'Flake Family', href: 'https://dentonflake.github.io/wdd231/final/' }
+      { name: 'Flake Family', href: 'https://dentonflake.github.io/wdd231/final/' },
+      { name: 'Hawkins Chamber of Commerce', href: 'https://dentonflake.github.io/wdd231/chamber/' },
+      { name: 'Book Nook', href: 'https://dentonflake.github.io/book-nook/' },
     ]
   }
 ]
