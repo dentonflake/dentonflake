@@ -31,6 +31,16 @@ const websites = [
       height: 1562
     },
     link: 'https://dentonflake.github.io/book-nook'
+  },
+  {
+    title: 'The Divine Gift of Forgiveness',
+    description: 'This website that features the The Divine Gift of Forgiveness.',
+    thumbnail: {
+      url: '/images/divine-gift-of-forgiveness.png',
+      width: 3018,
+      height: 1562
+    },
+    link: 'https://school.dentonflake.com/institute'
   }
 ]
 

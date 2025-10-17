@@ -29,6 +29,7 @@ const lists = [
       { name: 'Flake Family', href: 'https://dentonflake.github.io/wdd231/final/' },
       { name: 'Hawkins Chamber of Commerce', href: 'https://dentonflake.github.io/wdd231/chamber/' },
       { name: 'Book Nook', href: 'https://dentonflake.github.io/book-nook/' },
+      { name: 'The Divine Gift of Forgiveness', href: 'https://school.dentonflake.com/institute' },
     ]
   }
 ]
