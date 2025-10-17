@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     url: 'https://dentonflake.com',
     siteName: 'Denton Flake'
   },
+  manifest: '/manifest.webmanifest'
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
