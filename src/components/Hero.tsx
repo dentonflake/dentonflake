@@ -15,6 +15,7 @@ const Hero = () => {
           alt="Memoji of Denton Flake"
           width={420}
           height={420}
+          quality={100}
           priority
         ></Image>
 

@@ -23,6 +23,7 @@ const Project = ({ title, description, thumbnail, link }: Props) => {
           width={thumbnail.width}
           height={thumbnail.height}
           className={styles.thumbnail}
+          priority
         ></Image>
         <div className={styles.body}>
           <h3 className={styles.title}>{title}</h3>
