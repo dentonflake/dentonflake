@@ -66,6 +66,10 @@
 
     align-items: start;
   }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 75rem) {
@@ -73,16 +77,6 @@
   .content {
     max-width: 70rem;
   }
-}
-
-@media (min-width: 45rem) {
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 65rem) {
 
   .cards {
     grid-template-columns: repeat(3, 1fr);

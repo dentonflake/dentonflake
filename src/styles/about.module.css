@@ -5,6 +5,7 @@
   align-items: center;
   padding: var(--space-8);
   /* background-color: var(--color-neutral-900); */
+  animation: fadeInLeft 0.75s ease both;
 }
 
 .content {
@@ -39,5 +40,17 @@
 
   .content {
     max-width: 70rem;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

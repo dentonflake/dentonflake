@@ -41,7 +41,7 @@
   line-height: var(--text-base--line-height);
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 55rem) {
 
   .link {
     animation: fadeInRight 0.5s ease both;

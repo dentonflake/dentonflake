@@ -24,7 +24,7 @@ const websites = [
   },
   {
     title: 'Lacy Coombs Hairstylist',
-    description: 'This website features Lacy Flake and her business.',
+    description: 'This website features Lacy Coombs and her business.',
     thumbnail: {
       url: '/images/lacycoombshairstylist.png',
       width: 3018,
