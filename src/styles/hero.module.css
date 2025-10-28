@@ -4,8 +4,6 @@
   align-items: center;
 
   padding: var(--space-9) 0;
-
-  background-color: var(--color-neutral-950);
 }
 
 .content {
@@ -43,11 +41,11 @@
 
 .title, .subtitle {
   text-align: center;
+  animation: fadeOutTop 0.75s ease both;
 }
 
 .name {
   color: var(--color-primary-500);
-  animation: fadeOutTop 0.75s ease both;
 }
 
 @media (min-width: 55rem) {
@@ -69,6 +67,7 @@
 
   .title, .subtitle {
     text-align: left;
+    animation: fadeInTop 0.75s ease both;
   }
 
   .image {

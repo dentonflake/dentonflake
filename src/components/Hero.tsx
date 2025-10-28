@@ -20,12 +20,13 @@ const Hero = () => {
         ></Image>
 
         <div className={styles.social}>
-          <p className={styles.subtitle}>Software Developer</p>
 
           <h1 className={styles.title}>
             Hello! I&apos;m
             <p className={styles.name}>Denton Flake</p>
           </h1>
+          
+          <p className={styles.subtitle}>Software Developer</p>
 
         </div>
 
