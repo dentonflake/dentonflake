@@ -23,6 +23,16 @@ const websites = [
     link: 'https://dentonflake.github.io/wdd231/chamber/'
   },
   {
+    title: 'Lacy Coombs Hairstylist',
+    description: 'This website features Lacy Flake and her business.',
+    thumbnail: {
+      url: '/images/lacycoombshairstylist.png',
+      width: 3018,
+      height: 1562
+    },
+    link: 'https://lacycoombsharisttylist.com'
+  },
+  {
     title: 'Book Nook',
     description: 'This website uses Google\'s Book API to fetch books related to the users search.',
     thumbnail: {
@@ -41,6 +51,16 @@ const websites = [
       height: 1562
     },
     link: 'https://school.dentonflake.com/institute'
+  },
+  {
+    title: 'Tactical Options Trading',
+    description: 'This website features Kirk Flake and his business.',
+    thumbnail: {
+      url: '/images/tacticaloptionstrading.png',
+      width: 3018,
+      height: 1562
+    },
+    link: 'https://dentonflake.github.io/tacticaloptionstrading'
   }
 ]
 

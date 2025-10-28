@@ -21,6 +21,14 @@
   animation-delay: 0.3s;
 }
 
+.projects > :nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.projects > :nth-child(6) {
+  animation-delay: 0.5s;
+}
+
 
 @media (min-width: 45rem) {
 
