@@ -30,7 +30,7 @@ const websites = [
       width: 3018,
       height: 1562
     },
-    link: 'https://lacycoombsharisttylist.com'
+    link: 'https://lacycoombshairstylist.com'
   },
   {
     title: 'Book Nook',
