@@ -18,6 +18,6 @@ const techStack = {
   libraries: ['React', 'Zod', 'Better Auth', 'Moment'],
   frameworks: ['Next.js', 'Express'],
   orms: ['Prisma'],
-  devTools: ["VS Code", "Git", "GitHub", "pnpm", "npm", "DataGrip"]
+  devTools: ['VS Code', 'Git', 'GitHub', 'pnpm', 'npm', 'DataGrip']
 };
 ```
