@@ -1,6 +1,6 @@
 # 👋 Hey there! I'm Denton Flake
 
-### 👨🏼‍💻 Software Developer | 🤖 Creater | 🔨 Problem Solver
+### 👨🏼‍💻 Applications Developer & 📚 Full-time Student
 
 ---
 
@@ -22,12 +22,14 @@ But more than that, I’m a husband, a thinker, and someone who believes that wo
 
 ---
 
-## 🛠️ Tech Toolbox
+## 🛠️ My Tech Stack
 
 ```ts
-const toolbox = {
-  frontend: ["HTML", "CSS", "SCSS", "JavaScript", "TypeScript"],
-  backend: ["Node.js", "Python", "C#"],
-  databases: ["MySQL", "PostgreSQL"],
-  devTools: ["Git", "GitHub", "NPM", "VS Code"]
+const techStack = {
+  languages: ['TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS', 'SCSS'],
+  libraries: ['React', 'Zod', 'Better Auth', 'Moment'],
+  frameworks: ['Next.js', 'Express'],
+  orms: ['Prisma'],
+  devTools: ["VS Code", "Git", "GitHub", "pnpm", "npm", "DataGrip"]
 };
+```
