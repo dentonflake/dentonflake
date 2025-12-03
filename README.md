@@ -6,7 +6,7 @@
 
 ## 🚀 About Me
 
-I am a full-stack applications developer and full-time student pursuing a Bachelor's of Science degree in Software Development. I have 1 year of professional experience and 5+ years of self-taught lessons and builiding personal projects.
+I am a full-stack applications developer and full-time student pursuing a Bachelor's of Science degree in Software Development. I have 1 year of professional experience building APIs and frontend applications with Retool, and 5+ years of self-taught lessons and builiding personal projects with a variety of libraries and frameworks.
 
 ---
 
