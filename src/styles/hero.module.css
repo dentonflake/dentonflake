@@ -1,0 +1,137 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--space-9) 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+
+  max-width: 25rem;
+  width: 100%;
+}
+
+.image {
+  border-radius: 50%;
+  border: var(--space-2) solid var(--color-primary-500);
+  padding: var(--space-3);
+
+  width: 20rem;
+  height: auto;
+
+  animation: fadeInTop 0.75s ease both;
+}
+
+.title {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-5xl--line-height);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  line-height: var(--text-lg--line-height);
+  color: var(--color-neutral-300);
+}
+
+.title, .subtitle {
+  text-align: center;
+  animation: fadeOutTop 0.75s ease both;
+}
+
+.name {
+  color: var(--color-primary-500);
+}
+
+@media (min-width: 55rem) {
+
+  .content {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    max-width: 50rem;
+  }
+
+  .title {
+    font-size: var(--text-6xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-xl);
+  }
+
+  .title, .subtitle {
+    text-align: left;
+    animation: fadeInTop 0.75s ease both;
+  }
+
+  .image {
+    border: none;
+    border-radius: 0;
+
+    width: 15rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 75rem) {
+
+  .content {
+    max-width: 70rem;
+  }
+
+  .title {
+    font-size: var(--text-8xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-2xl);
+  }
+
+  .image {
+    width: 25rem;
+    height: auto;
+    animation: fadeInRight 0.75s ease both;
+  }
+}
+
+@keyframes fadeOutTop {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+    filter: blur(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

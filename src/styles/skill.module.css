@@ -1,0 +1,15 @@
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background-color: var(--color-neutral-800);
+  padding: var(--space-3) var(--space-5);
+  border-left: solid var(--space-1) var(--color-primary-600);
+  box-shadow: var(--shadow-md);
+}
+
+.icon {
+  width: var(--space-6);
+  height: auto;
+}
