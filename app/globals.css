@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1c222b;
+  --background: #16181b;
   --foreground: #f5fbff;
-  --muted: #98a6b8;
-  --border: #334252;
-  --surface: #232c37;
+  --muted: #9aa3ad;
+  --border: #2d3238;
+  --surface: #1d2126;
   --accent: #38bdf8;
   --accent-foreground: #08131a;
   --ring: color-mix(in srgb, var(--accent) 38%, white);
@@ -28,11 +28,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #171d25;
+    --background: #121417;
     --foreground: #f5fbff;
-    --muted: #9ba9bb;
-    --border: #2f3d4d;
-    --surface: #202833;
+    --muted: #a1a9b3;
+    --border: #252a31;
+    --surface: #171b20;
     --accent: #4cc9ff;
     --accent-foreground: #071218;
     --ring: color-mix(in srgb, var(--accent) 45%, black);
@@ -46,15 +46,13 @@
 
   html {
     color-scheme: light dark;
+    background-color: var(--background);
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
     min-height: 100vh;
     text-rendering: optimizeLegibility;
-    background-image:
-      radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 12%, transparent), transparent 30%),
-      linear-gradient(to bottom, color-mix(in srgb, var(--surface) 94%, var(--background)), var(--background));
   }
 
   a {
