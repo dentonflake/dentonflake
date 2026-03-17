@@ -1,4 +1,5 @@
 
+import About from "./components/about";
 import FeaturedProjects from "./components/projects/featured-projects";
 import Hero from "./components/hero";
 
@@ -7,6 +8,7 @@ const Page = () => {
     <main>
       <Hero />
       <FeaturedProjects />
+      <About />
     </main>
   );
 };
