@@ -10,10 +10,10 @@ const Footer = () => {
         </p>
 
         <div className="flex gap-4 text-sm">
-          <Link href="https://github.com" className="text-muted hover:text-accent">
+          <Link href="https://github.com/dentonflake" className="text-muted hover:text-accent">
             GitHub
           </Link>
-          <Link href="https://linkedin.com" className="text-muted hover:text-accent">
+          <Link href="https://www.linkedin.com/in/dentonflake" className="text-muted hover:text-accent">
             LinkedIn
           </Link>
         </div>
