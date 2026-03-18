@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Denton Flake — Portfolio
 
-## Getting Started
+Personal portfolio website for **Denton Flake**, full-stack applications developer and B.S. Software Development student.
 
-First, run the development server:
+**Live site:** [dentonflake.com](https://dentonflake.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I'm a full-stack developer with 1 year of professional experience building internal tools and APIs, and 5+ years of self-taught experience across a wide range of libraries and frameworks. Currently working at Nellis Auction and pursuing a degree in Software Development at Brigham Young University – Idaho.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Stack:** Next.js · TypeScript · React · Prisma · PostgreSQL · SQL · Retool · Tailwind CSS
 
-## Learn More
+## Connect
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email:** me@dentonflake.com
+- **LinkedIn:** [linkedin.com/in/dentonflake](https://www.linkedin.com/in/dentonflake)
+- **GitHub:** [github.com/dentonflake](https://github.com/dentonflake)
