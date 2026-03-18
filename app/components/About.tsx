@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Contributions from "./Contributions";
 
 const skills = [
@@ -51,16 +52,13 @@ export default function About() {
               border: "1px solid var(--border)",
             }}
           >
-            <img
+            <Image
               src="/profile.png"
               alt="Denton Flake"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center top",
-                display: "block",
-              }}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              quality={50}
+              priority
             />
             <div style={{ position: "absolute", top: 0, right: 0, width: "40px", height: "40px", borderBottom: "1px solid var(--accent-dim)", borderLeft: "1px solid var(--accent-dim)" }} />
             <div style={{ position: "absolute", bottom: 0, left: 0, width: "40px", height: "40px", borderTop: "1px solid var(--accent-dim)", borderRight: "1px solid var(--accent-dim)" }} />
