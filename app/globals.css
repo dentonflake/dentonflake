@@ -168,10 +168,10 @@ body::after {
   gap: 1.75rem;
   align-items: center;
 }
-.nav-hamburger { display: none !important; }
+.nav-hamburger { display: none; }
 
 @media (max-width: 640px) {
-  .nav-hamburger { display: flex !important; }
+  .nav-hamburger { display: flex; }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex;
@@ -187,5 +187,4 @@ body::after {
     border-bottom: 1px solid var(--border);
     z-index: 99;
   }
-  .nav-hamburger { display: flex; }
 }
