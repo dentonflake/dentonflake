@@ -2,13 +2,13 @@ import Image from "next/image";
 import Contributions from "./Contributions";
 
 const skills = [
-
   { category: "Frontend", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "HTML/CSS"] },
   { category: "Backend", items: ["Node.js", "Prisma", "PostgreSQL", "SQL", "REST APIs"] },
   { category: "Tools", items: ["Retool", "Git", "GitHub", "Figma", "Vercel"] },
 ];
 
 export default function About() {
+  
   return (
     <section
       id="about"
