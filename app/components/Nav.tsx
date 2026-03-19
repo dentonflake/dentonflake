@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 const links = [
+  { label: "Home", href: "#" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
@@ -11,19 +12,22 @@ const links = [
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("#");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+      if (window.scrollY < 40) setActive("#");
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    const sections = links.map((l) =>
-      document.querySelector(l.href) as HTMLElement | null
-    );
+    const sections = links
+      .filter((l) => l.href !== "#")
+      .map((l) => document.querySelector(l.href) as HTMLElement | null);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
