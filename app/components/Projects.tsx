@@ -1,25 +1,29 @@
 "use client";
 
+import Image from "next/image";
+
 const projects = [
   {
     number: "01",
     name: "Lacy Coombs Hairstylist",
     description:
       "Portfolio website for a hairstylist featuring service showcases, client booking functionality, and a polished, brand-aligned design.",
-    tech: ["Next.js", "TypeScript", "Prisma"],
+    tech: ["Next.js", "TypeScript", "Prisma", "Better-Auth"],
     live: "https://www.lacycoombshairstylist.com/",
     github: null,
     featured: true,
+    image: "/lacycoombshairstylist.png",
   },
   {
     number: "02",
-    name: "Chamber of Commerce",
+    name: "Habit Tracker",
     description:
-      "Responsive chamber of commerce site featuring dynamic business listings, weather integration, and client-side interactivity.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://dentonflake.github.io/wdd231/chamber/",
-    github: "https://github.com/dentonflake",
+      "Full-stack habit tracking app with category-based organisation, live completion stats, and secure per-account data isolation.",
+    tech: ["Next.js", "TypeScript", "Prisma", "Better-Auth"],
+    live: "https://habit-tracker.dentonflake.com/",
+    github: "https://github.com/dentonflake/habit-tracker",
     featured: false,
+    image: "/habit-tracker.png",
   },
   {
     number: "03",
@@ -30,6 +34,7 @@ const projects = [
     live: "https://dentonflake.github.io/wdd231/final/",
     github: "https://github.com/dentonflake",
     featured: false,
+    image: "/my-family.png",
   },
 ];
 
@@ -116,7 +121,8 @@ export default function Projects() {
               </span>
 
               {/* Content + links together */}
-              <div>
+              <div className="project-content">
+                <div style={{ flex: 1 }}>
                 <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", marginBottom: "0.5rem", flexWrap: "wrap" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
                     <h3
@@ -184,6 +190,18 @@ export default function Projects() {
                     <span key={t} className="tag">{t}</span>
                   ))}
                 </div>
+                </div>
+                {project.image && (
+                  <div className="project-thumbnail">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={180}
+                      height={113}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           ))}
