@@ -30,7 +30,10 @@ const QUERY = `
 
 async function fetchContributions(): Promise<ContributionCalendar | null> {
   const token = process.env.GITHUB_TOKEN;
-  if (!token) return null;
+  if (!token) {
+    console.error("GITHUB_TOKEN is missing from environment variables.");
+    return null;
+  }
 
   try {
     const res = await fetch("https://api.github.com/graphql", {
@@ -42,10 +45,21 @@ async function fetchContributions(): Promise<ContributionCalendar | null> {
       body: JSON.stringify({ query: QUERY }),
       next: { revalidate: 3600 },
     });
-    if (!res.ok) return null;
+    
+    if (!res.ok) {
+      console.error("GitHub API error:", res.status, res.statusText);
+      return null;
+    }
+    
     const json = await res.json();
+    if (json.errors) {
+      console.error("GitHub GraphQL errors:", json.errors);
+      return null;
+    }
+    
     return json?.data?.user?.contributionsCollection?.contributionCalendar ?? null;
-  } catch {
+  } catch (err) {
+    console.error("Fetch contributions error:", err);
     return null;
   }
 }
@@ -60,10 +74,10 @@ function getLevel(count: number, max: number): 0 | 1 | 2 | 3 | 4 {
 
 const LEVEL_COLORS = [
   "var(--bg-elevated)",
-  "#0b4f5e",
-  "#0a7a91",
-  "#08a5c3",
-  "var(--accent)",
+  "#3e361a",
+  "#70622a",
+  "#a38e3a",
+  "var(--accent)", // #d4af37
 ];
 
 const DAY_LABELS = ["", "Mon", "", "Wed", "", "Fri", ""];
@@ -99,14 +113,17 @@ export default async function Contributions() {
   const gridW = totalCols * (CELL + GAP) - GAP;
 
   return (
-    <div style={{ marginTop: "5rem" }}>
+    <div style={{ marginTop: "2rem" }} className="reveal-on-scroll">
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem" }}>
-        <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)", margin: 0 }}>
-          GitHub Activity
-        </p>
-        <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", color: "var(--text-muted)", margin: 0 }}>
-          <span style={{ color: "var(--accent)" }}>{totalContributions.toLocaleString()}</span> contributions in the last year
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "2rem", flexWrap: "wrap", gap: "1rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <span style={{ width: "24px", height: "1px", background: "var(--accent)" }} />
+          <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--accent)", margin: 0 }}>
+            GitHub Momentum
+          </p>
+        </div>
+        <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.6rem", letterSpacing: "0.1em", color: "var(--text-muted)", margin: 0 }}>
+          <span style={{ color: "var(--text)", fontWeight: "bold" }}>{totalContributions.toLocaleString()}</span> contributions / past year
         </p>
       </div>
 
@@ -121,7 +138,7 @@ export default async function Contributions() {
                 style={{
                   position: "absolute",
                   left: `${col * (CELL + GAP)}px`,
-                  fontFamily: "var(--font-martian), monospace",
+                  fontFamily: "var(--font-mono)",
                   fontSize: "0.6rem",
                   color: "var(--text-muted)",
                   whiteSpace: "nowrap",
@@ -144,7 +161,7 @@ export default async function Contributions() {
                     width: "24px",
                     display: "flex",
                     alignItems: "center",
-                    fontFamily: "var(--font-martian), monospace",
+                    fontFamily: "var(--font-mono)",
                     fontSize: "0.55rem",
                     color: "var(--text-muted)",
                     flexShrink: 0,
@@ -183,11 +200,11 @@ export default async function Contributions() {
 
           {/* Legend */}
           <div style={{ display: "flex", alignItems: "center", gap: "6px", marginTop: "0.75rem", marginLeft: "28px" }}>
-            <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.55rem", color: "var(--text-muted)" }}>Less</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", color: "var(--text-muted)" }}>Less</span>
             {LEVEL_COLORS.map((color, i) => (
               <div key={i} style={{ width: `${CELL}px`, height: `${CELL}px`, borderRadius: "2px", background: color, flexShrink: 0 }} />
             ))}
-            <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.55rem", color: "var(--text-muted)" }}>More</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", color: "var(--text-muted)" }}>More</span>
           </div>
         </div>
       </div>

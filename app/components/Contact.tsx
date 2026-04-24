@@ -1,168 +1,101 @@
 "use client";
 
-const socials = [
-  {
-    label: "GitHub",
-    href: "https://github.com/dentonflake",
-    handle: "@dentonflake",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/dentonflake",
-    handle: "dentonflake",
-  },
-  {
-    label: "Email",
-    href: "mailto:me@dentonflake.com",
-    handle: "me@dentonflake.com",
-  },
-];
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="section-pad"
-      style={{
-        borderTop: "1px solid var(--border)",
-        background: "var(--bg-surface)",
-      }}
-    >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          className="reveal"
-          style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "3rem" }}
-        >
-          <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-            04 /
-          </span>
-          <h2
-            style={{
-              fontFamily: "var(--font-syne), sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-              letterSpacing: "-0.02em",
-              color: "var(--text)",
-              margin: 0,
-            }}
+    <section id="contact" className="section-pad relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Massive Call to Action */}
+        <div className="mb-32">
+          <motion.div 
+            className="flex items-center gap-3 mb-8"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
           >
-            Contact
-          </h2>
+            <span className="w-8 h-px bg-accent" />
+            <span className="font-mono text-[10px] tracking-widest uppercase text-accent">Next Steps</span>
+          </motion.div>
+          
+          <motion.h2 
+            className="font-display font-black leading-[0.85] tracking-tighter"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            READY TO <br />
+            <span className="text-accent-secondary italic font-light">ELEVATE</span> YOUR <br />
+            DIGITAL PRESENCE?
+          </motion.h2>
         </div>
 
-        <div className="two-col">
-          {/* Big CTA */}
-          <div className="reveal">
-            <h3
-              style={{
-                fontFamily: "var(--font-syne), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2rem, 5vw, 4rem)",
-                lineHeight: 1.05,
-                letterSpacing: "-0.02em",
-                color: "var(--text)",
-                margin: "0 0 1.5rem",
-              }}
-            >
-              Let&apos;s build
-              <br />
-              <span style={{ color: "var(--accent)" }}>something.</span>
-            </h3>
-            <p style={{ fontFamily: "var(--font-crimson), serif", fontSize: "1.15rem", color: "var(--text-muted)", maxWidth: "400px", lineHeight: 1.7, margin: "0 0 2.5rem" }}>
-              I&apos;m open to freelance work, collaborations, and full-time
-              opportunities. Have a project in mind? Let&apos;s talk.
-            </p>
-            <a
-              href="mailto:me@dentonflake.com"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                fontFamily: "var(--font-martian), monospace",
-                fontSize: "0.72rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-                color: "var(--bg)",
-                background: "var(--accent)",
-                padding: "0.9em 2em",
-                border: "1px solid var(--accent)",
-                transition: "background 0.2s, color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "transparent";
-                (e.currentTarget as HTMLElement).style.color = "var(--accent)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "var(--accent)";
-                (e.currentTarget as HTMLElement).style.color = "var(--bg)";
-              }}
-            >
-              Send me an email ↗
+        {/* Contact Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-32">
+          
+          {/* Direct Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-muted mb-8">Direct</h4>
+            <a href="mailto:inbox@dentonflake.com" className="font-display font-bold text-2xl lg:text-3xl hover:text-accent transition-colors duration-300">
+              inbox<br/>@dentonflake.com
             </a>
-          </div>
+          </motion.div>
 
-          {/* Socials */}
-          <div className="reveal reveal-delay-2">
-            <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-              Find me online
-            </p>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              {socials.map((s, i) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target={s.href.startsWith("mailto") ? undefined : "_blank"}
-                  rel={s.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "1.25rem 0",
-                    borderBottom: i < socials.length - 1 ? "1px solid var(--border)" : "none",
-                    textDecoration: "none",
-                    transition: "padding-left 0.2s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.paddingLeft = "0.75rem";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.paddingLeft = "0";
-                  }}
-                >
-                  <span style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--text)" }}>
-                    {s.label}
-                  </span>
-                  <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>
-                    {s.handle} ↗
-                  </span>
-                </a>
-              ))}
+          {/* Social Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-muted mb-8">Social</h4>
+            <div className="flex flex-col gap-4">
+              <a href="https://www.linkedin.com/in/dentonflake" target="_blank" rel="noopener noreferrer" className="font-body text-xl text-white hover:text-accent-secondary transition-colors duration-300">
+                LinkedIn
+              </a>
+              <a href="https://github.com/dentonflake" target="_blank" rel="noopener noreferrer" className="font-body text-xl text-white hover:text-accent-secondary transition-colors duration-300">
+                GitHub
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="font-body text-xl text-white hover:text-accent-secondary transition-colors duration-300">
+                X / Twitter
+              </a>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Availability */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <h4 className="font-mono text-[10px] uppercase tracking-widest text-muted mb-8">Status</h4>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <p className="font-body text-xl text-white">Open for new projects</p>
+            </div>
+          </motion.div>
+
         </div>
 
-        {/* Footer */}
-        <div
-          style={{
-            marginTop: "5rem",
-            paddingTop: "2rem",
-            borderTop: "1px solid var(--border)",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "1rem",
-          }}
-        >
-          <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-            © {new Date().getFullYear()} Denton Flake
-          </span>
-          <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", letterSpacing: "0.08em", color: "var(--text-faint)" }}>
-            Built with Next.js
-          </span>
+        {/* Footer Credits */}
+        <div className="mt-48 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted">
+            © 2026 DENTON FLAKE — ALL RIGHTS RESERVED
+          </p>
         </div>
+
       </div>
+
+      {/* Background Accent */}
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent opacity-[0.03] blur-[120px] pointer-events-none" />
     </section>
   );
 }

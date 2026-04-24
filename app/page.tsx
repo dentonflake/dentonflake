@@ -4,21 +4,27 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import ScrollReveal from "./components/ScrollReveal";
+import SmoothScroll from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
+import Contributions from "./components/Contributions";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScroll>
+      <CustomCursor />
       <Nav />
-      <ScrollReveal>
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Experience />
-          <Contact />
-        </main>
-      </ScrollReveal>
-    </>
+      <main>
+        <Hero />
+        <About />
+        <section className="section-pad !pt-0">
+          <div className="max-w-7xl mx-auto">
+            <Contributions />
+          </div>
+        </section>
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+    </SmoothScroll>
   );
 }

@@ -1,125 +1,124 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const links = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+const LINKS = [
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("#");
-  const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const isProgrammaticScroll = useRef(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-      if (window.scrollY < 40) setActive("#");
+    const handleScrollStart = () => {
+      isProgrammaticScroll.current = true;
+      setIsVisible(true);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
-  useEffect(() => {
-    const sections = links
-      .filter((l) => l.href !== "#")
-      .map((l) => document.querySelector(l.href) as HTMLElement | null);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive("#" + e.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -50% 0px" }
-    );
-    sections.forEach((s) => s && observer.observe(s));
-    return () => observer.disconnect();
-  }, []);
+    const handleScrollComplete = () => {
+      // Small timeout to ensure the scroll event loop finishes
+      setTimeout(() => {
+        isProgrammaticScroll.current = false;
+      }, 100);
+    };
 
-  const linkStyle = (href: string) => ({
-    fontFamily: "var(--font-martian), monospace",
-    fontSize: "0.72rem",
-    letterSpacing: "0.1em",
-    textTransform: "uppercase" as const,
-    textDecoration: "none",
-    color: active === href ? "var(--accent)" : "var(--text-muted)",
-    transition: "color 0.2s ease",
-  });
+    window.addEventListener('scroll-start' as any, handleScrollStart);
+    window.addEventListener('scroll-complete' as any, handleScrollComplete);
+
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Update scrolled state
+      setIsScrolled(currentScrollY > 50);
+
+      // Skip hiding logic if we are in a programmatic scroll
+      if (isProgrammaticScroll.current) {
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Hide/Show logic for manual scroll
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+      window.removeEventListener('scroll-start' as any, handleScrollStart);
+      window.removeEventListener('scroll-complete' as any, handleScrollComplete);
+    };
+  }, [lastScrollY]);
 
   return (
-    <nav
-      className="nav-wrap"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        transition: "background 0.4s ease, border-color 0.4s ease",
-        background: scrolled || open ? "rgba(14,12,10,0.95)" : "transparent",
-        backdropFilter: scrolled || open ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
-      }}
-    >
-      <a
-        href="#"
-        style={{
-          fontFamily: "var(--font-syne), sans-serif",
-          fontWeight: 700,
-          fontSize: "1rem",
-          letterSpacing: "0.04em",
-          color: "var(--text)",
-          textDecoration: "none",
-          textTransform: "uppercase",
-        }}
-      >
-        DF
-      </a>
-
-      {/* Desktop + tablet links */}
-      <div className={`nav-links${open ? " open" : ""}`}>
-        {links.map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            style={linkStyle(l.href)}
-            onClick={() => setOpen(false)}
-            onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--text)")}
-            onMouseLeave={(e) =>
-              ((e.target as HTMLElement).style.color =
-                active === l.href ? "var(--accent)" : "var(--text-muted)")
-            }
+    <AnimatePresence>
+      {isVisible && (
+        <motion.nav
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -100, opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed top-0 left-0 right-0 z-[5000] p-6 flex justify-center pointer-events-none"
+        >
+          <div 
+            className={`flex items-center gap-12 px-8 py-4 rounded-full glass transition-all duration-500 pointer-events-auto
+              ${isScrolled ? 'scale-90 border-accent/20' : 'scale-100'}`}
           >
-            {l.label}
-          </a>
-        ))}
-      </div>
+            {/* Logo */}
+            <button 
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('scroll-to', { detail: 'html' }));
+              }}
+              className="font-display font-black text-xl tracking-tighter hover:text-accent transition-colors cursor-pointer bg-transparent border-none p-0"
+            >
+              DF<span className="text-accent">.</span>
+            </button>
 
-      {/* Hamburger (only visible at very small sizes via CSS) */}
-      <button
-        className="nav-hamburger"
-        aria-label="Toggle menu"
-        onClick={() => setOpen((o) => !o)}
-        style={{
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-          padding: "0.25rem",
-          flexDirection: "column",
-          gap: "5px",
-        }}
-      >
-        <span style={{ display: "block", width: "22px", height: "1px", background: "var(--text)", transition: "transform 0.2s", transform: open ? "rotate(45deg) translate(4px, 4px)" : "none" }} />
-        <span style={{ display: "block", width: "22px", height: "1px", background: "var(--text)", opacity: open ? 0 : 1, transition: "opacity 0.2s" }} />
-        <span style={{ display: "block", width: "22px", height: "1px", background: "var(--text)", transition: "transform 0.2s", transform: open ? "rotate(-45deg) translate(4px, -4px)" : "none" }} />
-      </button>
-    </nav>
+            {/* Divider */}
+            <div className="w-px h-4 bg-border" />
+
+            {/* Links */}
+            <div className="hidden md:flex items-center gap-8">
+              {LINKS.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => {
+                    const target = document.querySelector(link.href);
+                    if (target) {
+                      window.dispatchEvent(new CustomEvent('scroll-to', { detail: link.href }));
+                    }
+                  }}
+                  className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted hover:text-white transition-colors cursor-pointer px-2"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <button 
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('scroll-to', { detail: '#contact' }));
+              }}
+              className="px-4 py-2 bg-white text-bg rounded-full font-mono text-[9px] uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300 cursor-pointer border-none"
+            >
+              Let's Talk
+            </button>
+          </div>
+        </motion.nav>
+      )}
+    </AnimatePresence>
   );
 }

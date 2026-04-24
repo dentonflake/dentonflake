@@ -1,212 +1,137 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 
-const projects = [
+const PROJECTS = [
   {
-    number: "01",
-    name: "Lacy Coombs Hairstylist",
-    description:
-      "Portfolio website for a hairstylist featuring service showcases, client booking functionality, and a polished, brand-aligned design.",
-    tech: ["Next.js", "TypeScript", "Prisma", "Better-Auth"],
-    live: "https://www.lacycoombshairstylist.com/",
-    github: null,
-    featured: true,
-    image: "/lacycoombshairstylist.png",
-  },
-  {
-    number: "02",
-    name: "Habit Tracker",
-    description:
-      "Full-stack habit tracking app with category-based organisation, live completion stats, and secure per-account data isolation.",
-    tech: ["Next.js", "TypeScript", "Prisma", "Better-Auth"],
-    live: "https://habit-tracker.dentonflake.com/",
-    github: "https://github.com/dentonflake/habit-tracker",
-    featured: false,
+    title: "Habit Tracker",
+    description: "A precision-engineered platform for tracking daily habits with advanced analytics.",
     image: "/habit-tracker.png",
+    tags: ["React", "TypeScript", "Tailwind"],
+    size: "large",
   },
   {
-    number: "03",
-    name: "My Family",
-    description:
-      "Personal web project presenting family information in an accessible, clean, and well-structured format.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://dentonflake.github.io/wdd231/final/",
-    github: "https://github.com/dentonflake",
-    featured: false,
+    title: "Lacy Coombs Hairstylist",
+    description: "Boutique digital experience for a professional hair stylist.",
+    image: "/lacycoombshairstylist.png",
+    tags: ["Next.js", "Prisma"],
+    size: "small",
+  },
+  {
+    title: "My Family",
+    description: "A secure, private social network for families to share memories.",
     image: "/my-family.png",
+    tags: ["HTML", "CSS", "JS"],
+    size: "small",
   },
 ];
 
-const linkStyle = {
-  fontFamily: "var(--font-martian), monospace",
-  fontSize: "0.68rem",
-  letterSpacing: "0.1em",
-  textTransform: "uppercase" as const,
-  textDecoration: "none",
-  color: "var(--text-muted)",
-  transition: "color 0.2s",
-  whiteSpace: "nowrap" as const,
-};
-
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="section-pad"
-      style={{
-        borderTop: "1px solid var(--border)",
-        background: "var(--bg-surface)",
-      }}
-    >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          className="reveal"
-          style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "4rem" }}
-        >
-          <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-            02 /
-          </span>
-          <h2
-            style={{
-              fontFamily: "var(--font-syne), sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-              letterSpacing: "-0.02em",
-              color: "var(--text)",
-              margin: 0,
-            }}
+    <section id="projects" className="section-pad bg-surface">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+          <div>
+            <motion.div 
+              className="flex items-center gap-3 mb-6"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="w-8 h-px bg-accent-secondary" />
+              <span className="font-mono text-[10px] tracking-widest uppercase text-accent-secondary">Selected Works</span>
+            </motion.div>
+            <motion.h2 
+              className="font-display font-black tracking-tighter"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              CRAFTING <br />
+              <span className="text-muted/40">DIGITAL LEGACIES</span>
+            </motion.h2>
+          </div>
+          <motion.p 
+            className="max-w-xs text-muted font-body text-lg leading-relaxed"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
           >
-            Projects
-          </h2>
+            A collection of projects where technical rigor meets aesthetic intentionality.
+          </motion.p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {projects.map((project, i) => (
-            <div
-              key={project.number}
-              className={`reveal reveal-delay-${i + 1}`}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "80px 1fr",
-                gap: "2rem",
-                alignItems: "start",
-                padding: "2.5rem 0",
-                borderBottom: "1px solid var(--border)",
-                transition: "background 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "var(--bg-elevated)";
-                (e.currentTarget as HTMLElement).style.margin = "0 -2.5rem";
-                (e.currentTarget as HTMLElement).style.padding = "2.5rem 2.5rem";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "transparent";
-                (e.currentTarget as HTMLElement).style.margin = "0";
-                (e.currentTarget as HTMLElement).style.padding = "2.5rem 0";
-              }}
-            >
-              {/* Number */}
-              <span
-                style={{
-                  fontFamily: "var(--font-syne), sans-serif",
-                  fontWeight: 800,
-                  fontSize: "3rem",
-                  color: "var(--text-faint)",
-                  lineHeight: 1,
-                  userSelect: "none",
-                }}
-              >
-                {project.number}
-              </span>
-
-              {/* Content + links together */}
-              <div className="project-content">
-                <div style={{ flex: 1 }}>
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", marginBottom: "0.5rem", flexWrap: "wrap" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-syne), sans-serif",
-                        fontWeight: 700,
-                        fontSize: "1.4rem",
-                        letterSpacing: "-0.01em",
-                        color: "var(--text)",
-                        margin: 0,
-                      }}
-                    >
-                      {project.name}
-                    </h3>
-                    {project.featured && (
-                      <span
-                        style={{
-                          fontFamily: "var(--font-martian), monospace",
-                          fontSize: "0.6rem",
-                          letterSpacing: "0.1em",
-                          textTransform: "uppercase",
-                          color: "var(--accent)",
-                          border: "1px solid var(--accent-dim)",
-                          padding: "0.15em 0.5em",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        Featured
-                      </span>
-                    )}
-                  </div>
-                  {/* Links — always inside content column, no grid gymnastics */}
-                  <div style={{ display: "flex", gap: "1.25rem", alignItems: "center", flexShrink: 0 }}>
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={linkStyle}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--accent)")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-muted)")}
-                      >
-                        Live ↗
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={linkStyle}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text)")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--text-muted)")}
-                      >
-                        GitHub ↗
-                      </a>
-                    )}
-                  </div>
-                </div>
-                <p style={{ fontFamily: "var(--font-crimson), serif", fontSize: "1.05rem", color: "var(--text-muted)", margin: "0 0 1rem", lineHeight: 1.65 }}>
-                  {project.description}
-                </p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-                  {project.tech.map((t) => (
-                    <span key={t} className="tag">{t}</span>
-                  ))}
-                </div>
-                </div>
-                {project.image && (
-                  <div className="project-thumbnail">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      width={180}
-                      height={113}
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {PROJECTS.map((project, idx) => (
+            <ProjectCard key={project.title} project={project} index={idx} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: number }) {
+  const isLarge = project.size === "large";
+
+  return (
+    <motion.div 
+      className={`group relative overflow-hidden rounded-xl bg-elevated border border-border ${isLarge ? 'md:col-span-2' : ''}`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 1, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <div className={`flex flex-col ${isLarge ? 'md:flex-row' : ''} h-full`}>
+        {/* Image Container */}
+        <div className={`relative overflow-hidden ${isLarge ? 'md:w-2/3' : 'aspect-[16/10]'}`}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            className="h-full"
+          >
+            <Image 
+              src={project.image} 
+              alt={project.title}
+              width={1200}
+              height={800}
+              className="object-contain w-full h-full grayscale hover:grayscale-0 transition-[filter] duration-700 p-4"
+            />
+          </motion.div>
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-60" />
+        </div>
+
+        {/* Content */}
+        <div className={`p-8 md:p-12 flex flex-col justify-between ${isLarge ? 'md:w-1/3' : ''}`}>
+          <div>
+            <div className="flex flex-wrap gap-2 mb-6">
+              {project.tags.map(tag => (
+                <span key={tag} className="font-mono text-[9px] uppercase tracking-wider px-2 py-1 border border-border text-muted-foreground">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h3 className="font-display font-bold text-2xl mb-4 group-hover:text-accent transition-colors duration-300">
+              {project.title}
+            </h3>
+            <p className="text-muted leading-relaxed font-body">
+              {project.description}
+            </p>
+          </div>
+
+          <div className="mt-8">
+            <a href="#" className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white hover:text-accent transition-colors">
+              View Case Study <span className="text-lg">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }

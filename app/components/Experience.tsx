@@ -1,183 +1,133 @@
 "use client";
 
-const experience = [
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
+const EXPERIENCE = [
   {
     company: "Nellis Auction",
-    role: "Applications Developer",
-    period: "2024 – Present",
-    type: "Full-time",
-    description:
-      "Building and maintaining internal tools, APIs, and frontend applications. Leveraged Retool to rapidly develop internal dashboards and workflows, reducing operational overhead across departments.",
-    tech: ["Retool", "SQL", "REST APIs", "PostgreSQL"],
+    role: "Full-Stack Developer",
+    period: "2023 — Present",
+    description: "Building critical internal tools and high-performance APIs to streamline auction operations and inventory management.",
+    points: ["Internal tool development", "API orchestration", "Workflow automation"]
   },
   {
-    company: "Contract Work",
-    role: "Freelance Developer",
-    period: "Ongoing",
-    type: "Freelance",
-    description:
-      "Independent client projects including full-stack web applications, booking systems, and portfolio websites. End-to-end ownership from design to deployment.",
-    tech: ["Next.js", "TypeScript", "Prisma", "Vercel"],
+    company: "Brigham Young University – Idaho",
+    role: "B.S. Software Development Student",
+    period: "2022 — Present",
+    description: "Deepening expertise in software engineering principles, algorithm design, and data architecture.",
+    points: ["Computer Science fundamentals", "Scalable systems", "Collaborative engineering"]
   },
-];
-
-const education = [
   {
-    institution: "Brigham Young University – Idaho",
-    degree: "B.S. Software Development",
-    period: "In Progress",
-    note: "Full-time student",
-  },
+    company: "Freelance",
+    role: "Full-Stack Engineer",
+    period: "2018 — 2023",
+    description: "Architected custom digital solutions for diverse clients, mastering a wide range of libraries and modern frameworks.",
+    points: ["Full-stack architecture", "Custom client solutions", "Rapid prototyping"]
+  }
 ];
 
 export default function Experience() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end center"]
+  });
+
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   return (
-    <section
-      id="experience"
-      className="section-pad"
-      style={{ borderTop: "1px solid var(--border)" }}
-    >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          className="reveal"
-          style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "4rem" }}
-        >
-          <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-            03 /
-          </span>
-          <h2
-            style={{
-              fontFamily: "var(--font-syne), sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-              letterSpacing: "-0.02em",
-              color: "var(--text)",
-              margin: 0,
-            }}
+    <section id="experience" className="section-pad bg-surface" ref={containerRef}>
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Header */}
+        <div className="mb-24">
+          <motion.div 
+            className="flex items-center gap-3 mb-6"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
           >
-            Experience
-          </h2>
+            <span className="w-8 h-px bg-accent" />
+            <span className="font-mono text-[10px] tracking-widest uppercase text-accent">Career Path</span>
+          </motion.div>
+          <motion.h2 
+            className="font-display font-black tracking-tighter"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            EVOLUTION OF <br />
+            <span className="text-muted/40 italic">CRAFT</span>
+          </motion.h2>
         </div>
 
-        <div className="two-col">
-          {/* Work experience */}
-          <div>
-            <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "2rem" }}>
-              Work
-            </p>
-            <div style={{ position: "relative" }}>
-              <div
-                style={{
-                  position: "absolute",
-                  left: "0",
-                  top: "8px",
-                  bottom: "0",
-                  width: "1px",
-                  background: "var(--border)",
-                }}
-              />
-              <div style={{ display: "flex", flexDirection: "column", gap: "3rem", paddingLeft: "2rem" }}>
-                {experience.map((job, i) => (
-                  <div key={job.company} className={`reveal reveal-delay-${i + 1}`} style={{ position: "relative" }}>
-                    <div
-                      style={{
-                        position: "absolute",
-                        left: "-2rem",
-                        top: "8px",
-                        width: "9px",
-                        height: "9px",
-                        borderRadius: "50%",
-                        background: i === 0 ? "var(--accent)" : "var(--bg-elevated)",
-                        border: "1px solid " + (i === 0 ? "var(--accent)" : "var(--border)"),
-                        transform: "translateX(-4px)",
-                      }}
-                    />
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.35rem", flexWrap: "wrap", gap: "0.25rem" }}>
-                      <h3
-                        style={{
-                          fontFamily: "var(--font-syne), sans-serif",
-                          fontWeight: 700,
-                          fontSize: "1.1rem",
-                          color: "var(--text)",
-                          margin: 0,
-                        }}
-                      >
-                        {job.company}
-                      </h3>
-                      <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>
-                        {job.period}
-                      </span>
-                    </div>
-                    <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.7rem", color: "var(--accent)", letterSpacing: "0.08em", margin: "0 0 0.75rem" }}>
-                      {job.role} · {job.type}
-                    </p>
-                    <p style={{ fontFamily: "var(--font-crimson), serif", fontSize: "1.05rem", color: "var(--text-muted)", margin: "0 0 0.75rem", lineHeight: 1.65 }}>
-                      {job.description}
-                    </p>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-                      {job.tech.map((t) => (
-                        <span key={t} className="tag">{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Progress Line */}
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
+          <motion.div 
+            className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-accent -translate-x-1/2 origin-top hidden md:block"
+            style={{ scaleY: pathLength }}
+          />
 
-          {/* Education */}
-          <div className="reveal reveal-delay-2">
-            <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: "2rem" }}>
-              Education
-            </p>
-            {education.map((ed) => (
-              <div
-                key={ed.institution}
-                style={{
-                  padding: "2rem",
-                  background: "var(--bg-surface)",
-                  border: "1px solid var(--border)",
-                  position: "relative",
-                  overflow: "hidden",
-                  marginBottom: "1px",
-                }}
-              >
-                <div style={{ position: "absolute", top: 0, right: 0, width: "60px", height: "60px" }}>
-                  <div style={{ position: "absolute", top: 0, right: 0, width: "100%", height: "100%", borderBottom: "1px solid var(--accent-dim)", borderLeft: "1px solid var(--accent-dim)" }} />
-                </div>
-                <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", letterSpacing: "0.1em", color: "var(--text-muted)", margin: "0 0 0.75rem" }}>
-                  {ed.period}
-                </p>
-                <h3 style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "var(--text)", margin: "0 0 0.35rem", letterSpacing: "-0.01em" }}>
-                  {ed.institution}
-                </h3>
-                <p style={{ fontFamily: "var(--font-crimson), serif", fontSize: "1.05rem", color: "var(--text-muted)", margin: "0 0 0.5rem" }}>
-                  {ed.degree}
-                </p>
-                <span style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", color: "var(--accent)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-                  {ed.note}
-                </span>
-              </div>
+          <div className="space-y-24 md:space-y-32">
+            {EXPERIENCE.map((item, idx) => (
+              <ExperienceItem key={item.company} item={item} index={idx} />
             ))}
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1px", background: "var(--border)" }}>
-              {[
-                { value: "1yr+", label: "Professional exp." },
-                { value: "5yr+", label: "Self-taught" },
-              ].map((stat) => (
-                <div key={stat.label} style={{ background: "var(--bg)", padding: "1.5rem", textAlign: "center" }}>
-                  <p style={{ fontFamily: "var(--font-syne), sans-serif", fontWeight: 800, fontSize: "2rem", color: "var(--text)", margin: "0 0 0.25rem", letterSpacing: "-0.02em" }}>
-                    {stat.value}
-                  </p>
-                  <p style={{ fontFamily: "var(--font-martian), monospace", fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)", margin: 0 }}>
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
+
       </div>
     </section>
+  );
+}
+
+function ExperienceItem({ item, index }: { item: typeof EXPERIENCE[0], index: number }) {
+  const isEven = index % 2 === 0;
+
+  return (
+    <motion.div 
+      className={`relative flex flex-col md:flex-row gap-12 md:gap-0 ${isEven ? 'md:flex-row-reverse' : ''}`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+    >
+      {/* Node */}
+      <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 rounded-full border-2 border-accent bg-bg -translate-x-1/2 z-10 hidden md:block">
+        <motion.div 
+          className="w-full h-full rounded-full bg-accent"
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        />
+      </div>
+
+      {/* Content Side */}
+      <div className="md:w-1/2 md:px-16">
+        <div className={isEven ? 'md:text-left' : 'md:text-right'}>
+          <p className="font-mono text-xs text-accent-secondary mb-2">{item.period}</p>
+          <h3 className="font-display font-bold text-3xl mb-2">{item.company}</h3>
+          <p className="font-body text-xl text-white italic mb-6">{item.role}</p>
+          <p className="text-muted leading-relaxed font-body max-w-md mx-auto md:mx-0 md:ml-auto">
+            {item.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Points Side */}
+      <div className="md:w-1/2 md:px-16 flex flex-col justify-center">
+        <div className={`space-y-4 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
+          {item.points.map((point) => (
+            <div key={point} className={`flex items-center gap-3 ${isEven ? 'md:flex-row-reverse' : ''}`}>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/40" />
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{point}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
   );
 }
