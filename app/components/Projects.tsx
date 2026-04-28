@@ -17,6 +17,7 @@ const PROJECTS = [
     image: "/lacycoombshairstylist.png",
     tags: ["Next.js", "Prisma"],
     size: "small",
+    url: "https://www.lacycoombshairstylist.com"
   },
   {
     title: "My Family",
@@ -126,9 +127,9 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: n
           </div>
 
           <div className="mt-8">
-            <a href="#" className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white hover:text-accent transition-colors">
-              View Case Study <span className="text-lg">→</span>
-            </a>
+            {project.url && <a target="_blank" href={project.url} className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-white hover:text-accent transition-colors">
+              View Project <span className="text-lg">→</span>
+            </a>}
           </div>
         </div>
       </div>
