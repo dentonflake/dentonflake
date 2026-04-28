@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const PROJECTS = [
   {
-    title: "Habit Tracker",
-    description: "A precision-engineered platform for tracking daily habits with advanced analytics.",
-    image: "/habit-tracker.png",
-    tags: ["React", "TypeScript", "Tailwind"],
-    size: "large",
-  },
-  {
     title: "Lacy Coombs Hairstylist",
     description: "Boutique digital experience for a professional hair stylist.",
     image: "/lacycoombshairstylist.png",
     tags: ["Next.js", "Prisma"],
-    size: "small",
+    size: "large",
     url: "https://www.lacycoombshairstylist.com"
+  },
+  {
+    title: "Habit Tracker",
+    description: "A precision-engineered platform for tracking daily habits with advanced analytics.",
+    image: "/habit-tracker.png",
+    tags: ["React", "TypeScript", "Tailwind"],
+    size: "small",
   },
   {
     title: "My Family",
