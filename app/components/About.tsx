@@ -19,10 +19,10 @@ export default function About() {
           >
             <div className="aspect-[4/5] relative overflow-hidden rounded-2xl border border-border bg-elevated">
               <Image 
-                src="/profile.png" 
+                src="/profile.jpeg" 
                 alt="Denton Flake" 
                 fill 
-                className="object-cover grayscale"
+                className="object-cover"
               />
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-accent m-4 pointer-events-none" />
@@ -61,7 +61,7 @@ export default function About() {
 
               <div className="space-y-8 font-body text-xl text-muted leading-relaxed">
                 <p>
-                  I'm a <span className="text-white">Full-Stack Developer</span> with a passion for building internal tools and high-performance APIs. Currently, I'm working at <span className="text-accent">Nellis Auction</span> while pursuing a degree in Software Development at <span className="text-accent">Brigham Young University – Idaho</span>.
+                  I&apos;m a <span className="text-white">Full-Stack Developer</span> with a passion for building internal tools and high-performance APIs. Currently, I&apos;m working at <span className="text-accent">Nellis Auction</span> while pursuing a degree in Software Development at <span className="text-accent">Brigham Young University – Idaho</span>.
                 </p>
                 <p>
                   With over 5 years of self-taught experience and a year of professional enterprise development, I specialize in <span className="text-accent-secondary">Next.js</span>, <span className="text-accent-secondary">TypeScript</span>, and <span className="text-accent-secondary">PostgreSQL</span>. I thrive on bridging the gap between complex logic and clean, intuitive design.

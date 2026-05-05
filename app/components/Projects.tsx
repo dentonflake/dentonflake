@@ -11,21 +11,7 @@ const PROJECTS = [
     tags: ["Next.js", "Prisma"],
     size: "large",
     url: "https://www.lacycoombshairstylist.com"
-  },
-  {
-    title: "Habit Tracker",
-    description: "A precision-engineered platform for tracking daily habits with advanced analytics.",
-    image: "/habit-tracker.png",
-    tags: ["React", "TypeScript", "Tailwind"],
-    size: "small",
-  },
-  {
-    title: "My Family",
-    description: "A secure, private social network for families to share memories.",
-    image: "/my-family.png",
-    tags: ["HTML", "CSS", "JS"],
-    size: "small",
-  },
+  }
 ];
 
 export default function Projects() {
@@ -101,7 +87,7 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: n
               alt={project.title}
               width={1200}
               height={800}
-              className="object-contain w-full h-full grayscale hover:grayscale-0 transition-[filter] duration-700 p-4"
+              className="object-contain w-full h-full hover:grayscale-0 transition-[filter] duration-700 p-4"
             />
           </motion.div>
           {/* Overlay gradient */}
